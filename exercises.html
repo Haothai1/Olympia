@@ -2,26 +2,203 @@
 <html>
 
 <head>
+  <style>
+    html {
+      scroll-behavior: smooth
+    }
+
+    html {
+      font-family: 'Trebuchet MS', sans-serif
+    }
+
+    .box {
+      border: 2px solid powderblue;
+      padding: 30px;
+    }
+
+    .lis {
+      color: blue;
+      text-decoration: underline;
+    }
+  </style>
+
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width" , initial-scale=1>
   <title>Olympia</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
-   <h1 id="pepe">Olympia</h1> 
-  <nav>
-    <li><a href=index.html>Home</a></li>
-    <li><a href=process.html>Process</a></li>
-    <li><a href=goal.html>Goals</a></li>
-    <li><a href=routine.html>Routine</a></li>
-    <li><a href=exercises.html>Exercises</a></li>
-  </nav>
-  
-  <script src="script.js"></script>
-  <h1 id="pepe">Welcome to process!</h1>
 
- 
+
+
+<body>
+  <header>
+    <!-- Creates tittle -->
+    <img class="logo" src="img/logo.png" alt="Company " width="200" height=50">
+    <nav class="nav-links">
+      <li><a href=index.html>Home</a></li>
+      <!--<li><a href=process.html>Process</a></li>
+    -->
+      <!-- <li><a href=goal.html>Goals</a></li> -->
+      <!-- <li><a href=routine.html>Routine</a></li> -->
+      <li><a href=meal.html>Meal Plan</a></li>
+      <li><a href=exercises.html>Exercises</a></li>
+      <li><a href=tips.html>Workout Tips</a></li>
+      <li><a href=supplements.html>Supplements</a></li>
+      <li><a href=resources.html>Resources</a></li>
+      <li><a href=about.html>About Us</a></li>
+
+      <!-- <li><a href=tester.html> Tester Page </a></li> -->
+    </nav>
+    <!-- Register and Sign-in button; Placed outside to group elements separately from navigation links -->
+
+    <div class="menu-button-container">
+      <a href="#"><button class="menu-button">Sign up</button></a>
+      <a href="#"><button class="menu-button">Sign in</button></a>
+    </div>
+
+
+
+  </header>
+
+  <div class="exercise-background-row">
+    <div class="exercise-background-col">
+
+      <h2 id="exer">Become the Warrior You Were Meant To Be</h2>
+      <p style="color: white; text-shadow: 2px 2px 4px rgba(80,59,29, 0.5); transform: translate(10%,-300%)">
+        Browse our list of references to find the workout for you.
+      </p>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <h1 style="margin-top: 20px; margin-bottom: 20px; text-align:center">How would you like to work out today?</h1>
+
+  <div class="image-centering">
+    <div class="image-exer inline">
+      <a href="#Upper">
+        <img src="/img/upper.jpg" alt="Upper Body Workouts" style="width:300px; height: 300px;">
+        <div class="text-exer"><b>Upper Body Workouts</b></div>
+      </a>
+    </div>
+
+    <div class="image-exer inline">
+      <a href="#Lower">
+        <img src="/img/lower.jpg" alt="Lower Body Workouts" style="width:300px; height: 300px;">
+        <div class="text-exer"><b>Lower Body Workouts</b></div>
+      </a>
+    </div>
+
+    <div class="image-exer inline">
+      <a href="#Core">
+        <img src="/img/core.jpg" alt="Core Workouts" style="width:300px; height: 300px;">
+        <div class="text-exer"><b>Core Workouts</b></div>
+      </a>
+    </div>
+
+    <div class="image-exer inline">
+      <a href="#Cardio">
+        <img src="/img/cardio.jpg" alt="Cardio Workouts" style="width:300px; height: 300px;">
+        <div class="text-exer"><b>Cardio Workouts</b></div>
+      </a>
+    </div>
+  </div>
+
+
+  <div id="Upper">
+    <h2 class="box" ; style="margin-top: 20px; margin-bottom: 20px;">
+      Upper Body Workouts
+    </h2>
+    <ul style="transform: translate(5%,0%);">
+      <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
+          href="https://www.bodybuilding.com/exercises/rickshaw-carry">Rickshaw Carry </a></li>
+      <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
+          href="https://www.bodybuilding.com/exercises/side-laterals-to-front-raise-">Dumbell Front Raise to Lateral
+          Raise </a></li>
+      <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
+          href="https://www.bodybuilding.com/exercises/clean-and-press">Clean and Press </a></li>
+      <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
+          href="https://www.bodybuilding.com/exercises/farmers-walk">Dumbell Farmer's Walk </a></li>
+      <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
+          href="https://www.bodybuilding.com/exercises/standing-military-press">Military Press </a></li>
+    </ul>
+  </div>
+
+  <div id="Lower">
+    <h2 class="box" ; style="margin-top: 20px; margin-bottom: 20px;">
+      Lower Body Workouts
+    </h2>
+    <ul style="transform: translate(5%,0%);">
+      <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
+          href="https://www.bodybuilding.com/exercises/atlas-stones">Atlas Stones</a></li>
+      <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
+          href="https://www.bodybuilding.com/exercises/barbell-deadlift">Barbell Deadlift </a></li>
+      <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
+          href="https://www.bodybuilding.com/exercises/smith-machine-calf-raise">Smith Machine Calf Raise </a></li>
+      <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
+          href="https://www.bodybuilding.com/exercises/power-snatch">Power Snatch </a></li>
+      <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
+          href="https://www.bodybuilding.com/exercises/hyperextensions-back-extensions">Back Extension </a></li>
+    </ul>
+  </div>
+
+  <div id="Core">
+    <h2 class="box" ; style="margin-top: 20px; margin-bottom: 20px;">
+      Core Workouts
+    </h2>
+    <ul style="transform: translate(5%,0%);">
+      <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
+          href="https://www.bodybuilding.com/exercises/plank">Elbow Plank </a></li>
+      <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
+          href="https://www.bodybuilding.com/exercises/bottoms-up">Bottoms Up </a></li>
+      <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
+          href="https://www.bodybuilding.com/exercises/landmine-180s">Landmine Twist </a></li>
+      <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
+          href="https://www.bodybuilding.com/exercises/spider-crawl">Spider Crawl </a></li>
+      <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
+          href="https://www.bodybuilding.com/exercises/cross-body-crunch">Cross-Body Crunch </a></li>
+    </ul>
+  </div>
+
+  <div id="Cardio">
+    <h2 class="box" ; style="margin-top: 20px; margin-bottom: 20px;">
+      Cardio Workouts
+    </h2>
+    <ul style="transform: translate(5%,0%);">
+      <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
+          href="https://www.bodybuilding.com/exercises/rope-jumping">Jumping Rope</a></li>
+      <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
+          href="https://www.bodybuilding.com/exercises/step-mill">Stair Climber</a></li>
+      <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
+          href=https://www.bodybuilding.com/exercises/bicycling">Bicycling</a></li>
+      <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
+          href="https://www.bodybuilding.com/exercises/rowing-stationary">Rower</a></li>
+      <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
+          href="https://www.bodybuilding.com/exercises/elliptical-trainer">Elliptical Trainer</a></li>
+    </ul>
+  </div>
+
+
+
+
+  <footer>
+    <div class="footer-top">
+      <h3>IN PROGRESS . . .</h3>
+      <p>Random Text</p>
+      <ul class="social-icons">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>copyright &copy;2023 Olympia. designed by <span>Team 4: Hao, Nick, & Cesar</span></p>
+    </div>
+  </footer>
 
 
   <!--
@@ -31,6 +208,11 @@
   -->
   <!--  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-left"></script>
   -->
+
+
+
+
+
 </body>
 
 </html>

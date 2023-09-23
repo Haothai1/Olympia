@@ -3,31 +3,165 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Olympia</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&family=Montserrat:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
-  <!-- Creates tittle -->
-  <h1>Olympia</h1>
+
 
   <!-- Creates a navigation bar for the page and linking each html page together -->
-  
-  <nav>
-    <li><a href=index.html>Home</a></li>  
-    <li><a href=process.html>Process</a></li>
-    <li><a href=goal.html>Goals</a></li>
-    <li><a href=routine.html>Routine</a></li>
-    <li><a href=exercises.html>Exercises</a></li>
-  </nav>
-  
+  <header>
+    <!-- Creates tittle -->
+    <img class="logo" src="img/logo.png" alt="Company " width="200" height=50">
+    <nav class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <!--<li><a href=process.html>Process</a></li>
+    -->
+      <!-- <li><a href=goal.html>Goals</a></li> -->
+      <!-- <li><a href=routine.html>Routine</a></li> -->
+      <li><a href="meal.html">Meal Plan</a></li>
+      <li><a href="exercises.html">Exercises</a></li>
+      <li><a href="tips.html">Workout Tips</a></li>
+      <li><a href="supplements.html">Supplements</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="about.html">About Us</a></li>
+
+      <!-- <li><a href=tester.html> Tester Page </a></li> -->
+    </nav>
+    <!-- Register and Sign-in button; Placed outside to group elements separately from navigation links -->
+
+    <div class="menu-button-container">
+      <a href="#"><button class="menu-button">Sign up</button></a>
+      <a href="#"><button class="menu-button">Sign in</button></a>
+    </div>
+
+
+
+  </header>
+
+
   <script src="script.js"></script>
-  <h1 id="pepe">Welcome to Olympia!</h1>
-  <h1>Welcome to Olympia!</h1>
+  <div class="main-background-row">
+    <div class="main-background-col">
+      <!-- Main page section-->
+      <h2>Reach Your Highest Potential</h2>
+      <p>
+        Find the best version of yourself, achieve your workout goal, and the lifestyle you want.
+      </p>
+
+      <button>Get Started</button>
+    </div>
+  </div>
+
+  <!-- Content 2-->
+  <div class="main-s2-container-row">
+    <div class="frame">
+      <div class="main-s2-container-col">
+        <h2>Create a Meal Plan <br> that suits your needs</h2>
+        <p>
+          Find the meal that suits your workout goal, whether you are looking to gain muslce, increase endurance, or
+          lose
+          weight. <br>Customize your meals exclusively.
+        </p>
+        <button><a href="meal.html">CREATE MEAL</a></button>
+        <button><a href="resources.html">LEARN MORE</a></button>
+        <div class="img-row">
+
+          <img src="/img/breakfast2.jpg" alt="Grapefruit slice atop a pile of other slices" width="450" height="350">
+          <!-- https://pixabay.com/photos/breakfast-orange-juice-loaf-1804436/ -->
+          <img src="/img/breakfast1.jpg" alt="Grapefruit slice atop a pile of other slices" width="450" height="350">
+          <!-- https://pixabay.com/photos/breakfast-healthy-hummus-spread-1804457/ -->
+          <img src=" /img/bowl.jpg" alt="Grapefruit slice atop a pile of other slices" width="450" height="350">
+          <!-- https://pixabay.com/photos/bowl-breakfast-fruits-healthy-food-1844894/ -->
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Content 3-->
+  <div class="main-s3-container-row">
+    <div class="main-s3-container-col">
+      <h2>Exercises</h2>
+      <p>
+        Target a specific muscle group of your choice
+      </p>
+      <button><a href="exercises.html">LIST OF WORKOUTS</a></button>
+      <!-- <img src="img/exercise1.jpg" alt="Company" width="450" height="350">
+      <img src="img/exercise2.jpg" alt="abc" width="450" height="350"> -->
+
+    </div>
+  </div>
+
+  <!-- Content 4-->
+  <div class="left-image">
+    <img src="img/sup.jpg" alt="workout">
+    <div class="main-s4-container-row">
+      <div class="main-s4-container-col">
+        <h2>Supplements</h2>
+        <p>
+          Maximize your potential and get the most from your workout
+        </p>
+
+        <button><a href="supplements.html">FIND SUPPLEMENTS</a></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content 5-->
+  <div class="main-s5-container-row">
+    <div class="main-s5-container-col">
+      <h2>Resources</h2>
+      <p>
+        Learn how to improve your workout experience
+      </p>
+
+      <button><a href="resources.html">MORE INFORMATION</a></button>
+    </div>
+  </div>
+
+  <!-- Content 6-->
+  <div class="main-s6-container-row">
+    <div class="main-s6-container-col">
+      <h2>About the Project</h2>
+      <p>
+        Learn more about our team and what we do
+      </p>
+
+      <button <a href="about.html">ABOUT US</a></button>
+    </div>
+  </div>
 
 
-  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top">
+      <h3>IN PROGRESS . . .</h3>
+      <p>Random Text</p>
+      <ul class="social-icons">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>copyright &copy;2023 Olympia. designed by <span>Team 4: Hao, Nick, & Cesar</span></p>
+    </div>
+  </footer>
+
+
+
 
 
   <!--
