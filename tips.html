@@ -1,7 +1,30 @@
 <!DOCTYPE html>
 <html>
+<!-- Sources: https://www.self.com/story/workout-tips -->
 
 <head>
+  <link href='https://fonts.googleapis.com/css?family=Candal' rel='stylesheet'>
+  <style>
+    html {
+      scroll-behavior: smooth
+    }
+
+    html {
+      font-family: 'Trebuchet MS', sans-serif
+    }
+
+    .box {
+      border: 2px solid powderblue;
+      padding: 30px;
+    }
+
+    .lis {
+      color: blue;
+      text-decoration: underline;
+    }
+  
+  </style>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Olympia</title>
@@ -11,28 +34,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&family=Montserrat:wght@500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 
+
+
+
 <body>
-
-
   <!-- Creates a navigation bar for the page and linking each html page together -->
   <header>
     <!-- Creates tittle -->
-    <img class="logo" src="img/logo.png" alt="Company " width="200" height=50">
+    <a href="https://olympia.haothai2.repl.co/index.html">
+      <img class="logo" src="img/Group25.svg" alt="Company " width="200" height=50">
+    </a>
     <nav class="nav-links">
+      <!--  class="nav-links" -->
       <li><a href="index.html">Home</a></li>
       <!--<li><a href=process.html>Process</a></li>
     -->
       <!-- <li><a href=goal.html>Goals</a></li> -->
       <!-- <li><a href=routine.html>Routine</a></li> -->
-      <li><a href="meal.html">Meal Plan</a></li>
-      <li><a href="exercises.html">Exercises</a></li>
-      <li><a href="tips.html">Workout Tips</a></li>
-      <li><a href="supplements.html">Supplements</a></li>
+      <li>
+        <a href="meal.html">Meal Plan</a>
+        <ul class="dropdown-menu">
+          <li><a href="supplements.html">Supplements</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="exercises.html">Exercises</a>
+        <ul class="dropdown-menu">
+          <li><a href="tips.html">Workout Tips</a></li>
+
+        </ul>
+      </li>
       <li><a href="resources.html">Resources</a></li>
+
       <li><a href="about.html">About Us</a></li>
+
+
 
       <!-- <li><a href=tester.html> Tester Page </a></li> -->
     </nav>
@@ -42,27 +80,26 @@
       <a href="#"><button class="menu-button">Sign up</button></a>
       <a href="#"><button class="menu-button">Sign in</button></a>
     </div>
-
-
-
   </header>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~GLOBAL HEADER~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-  <script src="script.js"></script>
+  <div class="tip-title">
+    <h3> Find inspiration and tips to success </h3>
+    <p>Click 'Generate' to get started</p>
+    <button class="tip-button" id="tip-buttonX">Generate</button>
+  </div>
 
+  <div id="rand-container">
+    <div id="image-wrapper">
+      <img id="rand-gen" src="">
+      <div id="quote-container"></div>
+    </div>
+  </div>
+  
+  
 
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~GLOBAL FOOTER~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-
-
-
-
-  <!--
-  This script places a badge on your repl's full-browser view back to your repl's cover
-  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
-  teal, blue, blurple, magenta, pink!
-  -->
-  <!--  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-left"></script>
-  -->
-  <!-- Footer -->
   <footer>
     <div class="footer-top">
       <h3>IN PROGRESS . . .</h3>
@@ -80,6 +117,9 @@
       <p>copyright &copy;2023 Olympia. designed by <span>Team 4: Hao, Nick, & Cesar</span></p>
     </div>
   </footer>
+
+  <script src="script.js"></script>
+
 </body>
 
 </html>

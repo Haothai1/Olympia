@@ -17,21 +17,37 @@
 </head>
 
 <body>
+  <!-- Creates a navigation bar for the page and linking each html page together -->
   <header>
     <!-- Creates tittle -->
-    <img class="logo" src="img/logo.png" alt="Company " width="200" height=50">
+    <a href="https://olympia.haothai2.repl.co/index.html">
+      <img class="logo" src="img/Group25.svg" alt="Company " width="200" height=50">
+    </a>
     <nav class="nav-links">
+      <!--  class="nav-links" -->
       <li><a href="index.html">Home</a></li>
       <!--<li><a href=process.html>Process</a></li>
     -->
       <!-- <li><a href=goal.html>Goals</a></li> -->
       <!-- <li><a href=routine.html>Routine</a></li> -->
-      <li><a href="meal.html">Meal Plan</a></li>
-      <li><a href="exercises.html">Exercises</a></li>
-      <li><a href="tips.html">Workout Tips</a></li>
-      <li><a href="supplements.html">Supplements</a></li>
+      <li>
+        <a href="meal.html">Meal Plan</a>
+        <ul class="dropdown-menu">
+          <li><a href="supplements.html">Supplements</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="exercises.html">Exercises</a>
+        <ul class="dropdown-menu">
+          <li><a href="tips.html">Workout Tips</a></li>
+
+        </ul>
+      </li>
       <li><a href="resources.html">Resources</a></li>
+
       <li><a href="about.html">About Us</a></li>
+
+
 
       <!-- <li><a href=tester.html> Tester Page </a></li> -->
     </nav>
@@ -41,16 +57,13 @@
       <a href="#"><button class="menu-button">Sign up</button></a>
       <a href="#"><button class="menu-button">Sign in</button></a>
     </div>
-
-
-
   </header>
 
   <div class="supplements-background-row">
     <div class="supplements-background-col">
       
-      <h2>Supplements</h2>
-      <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> Here you will find all the suppliment information you need to prepare yourself to reach your fitness goals! 
+      <h2 style="margin-top: 80px;">Supplements</h2>
+      <p style="margin-top: 400px;"> Here you will find all the suppliment information you need to prepare yourself to reach your fitness goals! 
       </p>
 
     </div>
@@ -74,9 +87,9 @@
 
   <div id="Protein">
     <hr>
-  <h1> Protein </h1>
+  <h1 style="margin-top: 20px; margin-bottom: 20px; text-align: center;"> Protein </h1>
   
-  <img src="https://cdn.shopify.com/s/files/1/1851/4671/collections/protein_c3fbe852-f609-4e56-8a43-33c9b73ed817.jpg?v=1627359886" width="600" height="300">
+  <img src="https://cdn.shopify.com/s/files/1/1851/4671/collections/protein_c3fbe852-f609-4e56-8a43-33c9b73ed817.jpg?v=1627359886" width="600" height="300" class="sup-center">
 
   <h3> What is Protein?</h3>
 
@@ -104,10 +117,10 @@ Protein is a macronutrient that provides the body with amino acids, which are th
   
   <div id="Creatine">
   <hr>
-  <h1> Creatine </h1>
+  <h1 style="margin-top: 20px; margin-bottom: 20px; text-align: center;"> Creatine </h1>
   
     
-  <img  src="https://cdn.mrsupplement.com.au/images/uploads/mrsupplement/2022/jan/best-creatine-ab1.jpg" width="600" height="300">
+  <img  src="https://cdn.mrsupplement.com.au/images/uploads/mrsupplement/2022/jan/best-creatine-ab1.jpg" width="600" height="300" class="sup-center">
     
     <h3> What is a Creatine?</h3>
 
@@ -134,11 +147,11 @@ Creatine is formed in the human body from the amino acids methionine, glycine an
   
   <div id="Pre-Workout">
   <hr>
-  <h1> Pre-Workout </h1>
+  <h1 style="margin-top: 20px; margin-bottom: 20px; text-align: center;"> Pre-Workout </h1>
     
   
     
-  <img src="https://i0.wp.com/whatsgood.vitaminshoppe.com/wp-content/uploads/2018/04/preworkout-header.jpg?fit=740%2C306&ssl=1" width="600" height="300">
+  <img src="https://i0.wp.com/whatsgood.vitaminshoppe.com/wp-content/uploads/2018/04/preworkout-header.jpg?fit=740%2C306&ssl=1" width="600" height="300" class="sup-center">
 
   <h3> What is a Pre-Workout?</h3>
 
@@ -171,10 +184,10 @@ Pre-workout supplements include all the ingredients that people take with the go
 
   <div id="Recovery">
   <hr>
-  <h1> Recovery </h1>
+  <h1 style="margin-top: 20px; margin-bottom: 20px; text-align: center;"> Recovery </h1>
   
     
-  <img src="https://blacklabelsupplements.com/cdn/shop/products/RecoveryBundle.jpg?v=1669135726" width="600" height="500">
+  <img src="https://blacklabelsupplements.com/cdn/shop/products/RecoveryBundle.jpg?v=1669135726" width="600" height="500" class="sup-center">
 
     <h3> The Importance of Muscle Recovery </h3>
 

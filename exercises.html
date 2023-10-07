@@ -1,3 +1,22 @@
+<!-- CLICK BOX TEMPLATE -->
+<!-- <div class="image-exer inline">
+      <a href="#IDNAME">
+        <img src="IMAGEPATH" alt="ALTNAME" style="width:300px; height: 300px;">
+        <div class="text-exer"><b>NAME</b></div>
+      </a>
+    </div> -->
+
+
+<!-- WORKOUT LIST TEMPLATE -->
+<!-- <div id="IDNAME">
+    <h2 class="box" ; style="margin-top: 20px; margin-bottom: 20px;">
+      BODY PART NAME Workouts
+    </h2>
+    <ul id="exer" style="transform: translate(5%,0%);">
+      <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
+          href="EXERCISE LINK">exercise name</a></li>
+    </ul>
+  </div> -->
 <!DOCTYPE html>
 <html>
 
@@ -20,10 +39,16 @@
       color: blue;
       text-decoration: underline;
     }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
   </style>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width" , initial-scale=1>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Olympia</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,21 +62,37 @@
 
 
 <body>
+  <!-- Creates a navigation bar for the page and linking each html page together -->
   <header>
     <!-- Creates tittle -->
-    <img class="logo" src="img/logo.png" alt="Company " width="200" height=50">
+    <a href="https://olympia.haothai2.repl.co/index.html">
+      <img class="logo" src="img/Group25.svg" alt="Company " width="200" height=50">
+    </a>
     <nav class="nav-links">
-      <li><a href=index.html>Home</a></li>
+      <!--  class="nav-links" -->
+      <li><a href="index.html">Home</a></li>
       <!--<li><a href=process.html>Process</a></li>
     -->
       <!-- <li><a href=goal.html>Goals</a></li> -->
       <!-- <li><a href=routine.html>Routine</a></li> -->
-      <li><a href=meal.html>Meal Plan</a></li>
-      <li><a href=exercises.html>Exercises</a></li>
-      <li><a href=tips.html>Workout Tips</a></li>
-      <li><a href=supplements.html>Supplements</a></li>
-      <li><a href=resources.html>Resources</a></li>
-      <li><a href=about.html>About Us</a></li>
+      <li>
+        <a href="meal.html">Meal Plan</a>
+        <ul class="dropdown-menu">
+          <li><a href="supplements.html">Supplements</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="exercises.html">Exercises</a>
+        <ul class="dropdown-menu">
+          <li><a href="tips.html">Workout Tips</a></li>
+
+        </ul>
+      </li>
+      <li><a href="resources.html">Resources</a></li>
+
+      <li><a href="about.html">About Us</a></li>
+
+
 
       <!-- <li><a href=tester.html> Tester Page </a></li> -->
     </nav>
@@ -61,9 +102,6 @@
       <a href="#"><button class="menu-button">Sign up</button></a>
       <a href="#"><button class="menu-button">Sign in</button></a>
     </div>
-
-
-
   </header>
 
   <div class="exercise-background-row">
@@ -80,6 +118,8 @@
   <script src="script.js"></script>
   <h1 style="margin-top: 20px; margin-bottom: 20px; text-align:center">How would you like to work out today?</h1>
 
+<!--------------------------------------------------------------------->
+  
   <div class="image-centering">
     <div class="image-exer inline">
       <a href="#Upper">
@@ -109,13 +149,44 @@
       </a>
     </div>
   </div>
+<!--------------------------------------------------------------------->
+  
+  <div class="image-centering">
+    <div class="image-exer inline">
+      <a href="#Upper">
+        <img src="/img/upper.jpg" alt="Upper Body Workouts" style="width:300px; height: 300px;">
+        <div class="text-exer"><b>Upper Body Workouts</b></div>
+      </a>
+    </div>
 
+    <div class="image-exer inline">
+      <a href="#Lower">
+        <img src="/img/lower.jpg" alt="Lower Body Workouts" style="width:300px; height: 300px;">
+        <div class="text-exer"><b>Lower Body Workouts</b></div>
+      </a>
+    </div>
+
+    <div class="image-exer inline">
+      <a href="#Core">
+        <img src="/img/core.jpg" alt="Core Workouts" style="width:300px; height: 300px;">
+        <div class="text-exer"><b>Core Workouts</b></div>
+      </a>
+    </div>
+
+    <div class="image-exer inline">
+      <a href="#Cardio">
+        <img src="/img/cardio.jpg" alt="Cardio Workouts" style="width:300px; height: 300px;">
+        <div class="text-exer"><b>Cardio Workouts</b></div>
+      </a>
+    </div>
+  </div>
+<!--------------------------------------------------------------------->
 
   <div id="Upper">
     <h2 class="box" ; style="margin-top: 20px; margin-bottom: 20px;">
       Upper Body Workouts
     </h2>
-    <ul style="transform: translate(5%,0%);">
+    <ul id="exer" style="transform: translate(5%,0%);">
       <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
           href="https://www.bodybuilding.com/exercises/rickshaw-carry">Rickshaw Carry </a></li>
       <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
@@ -134,7 +205,7 @@
     <h2 class="box" ; style="margin-top: 20px; margin-bottom: 20px;">
       Lower Body Workouts
     </h2>
-    <ul style="transform: translate(5%,0%);">
+    <ul id="exer" style="transform: translate(5%,0%);">
       <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
           href="https://www.bodybuilding.com/exercises/atlas-stones">Atlas Stones</a></li>
       <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
@@ -152,7 +223,7 @@
     <h2 class="box" ; style="margin-top: 20px; margin-bottom: 20px;">
       Core Workouts
     </h2>
-    <ul style="transform: translate(5%,0%);">
+    <ul id="exer" style="transform: translate(5%,0%);">
       <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
           href="https://www.bodybuilding.com/exercises/plank">Elbow Plank </a></li>
       <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
@@ -170,7 +241,7 @@
     <h2 class="box" ; style="margin-top: 20px; margin-bottom: 20px;">
       Cardio Workouts
     </h2>
-    <ul style="transform: translate(5%,0%);">
+    <ul id="exer" style="transform: translate(5%,0%);">
       <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"
           href="https://www.bodybuilding.com/exercises/rope-jumping">Jumping Rope</a></li>
       <li style="margin-top: 4px; margin-bottom: 4px"><a class="lis"

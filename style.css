@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
 body {
@@ -100,13 +101,19 @@ button {
 /* Navigation Bar Start */
 header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
-  padding: 18px 10%;
+  /* padding: 18px 10%; */
+  padding: 0 249px;
   /* 20% on both sides */
   /* background-color: #24252A; */
   background-color: #f8f9fa;
+  list-style: none;
+  white-space: nowrap;
 }
+
+
+
 
 .logo {
   color: #f8f9fa;
@@ -116,14 +123,19 @@ header {
 
 }
 
-nav {
-  order: 2;
+.logo:nth-child(1) {
+  padding: 0 20px 0 0;
 }
 
 .nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  order: 2;
 
-  list-style: none;
 }
+
+
 
 .nav-links li {
   display: inline-block;
@@ -131,17 +143,52 @@ nav {
   list-style: none;
 }
 
-.logo:nth-child(1) {
-  padding: 0 20px 0 0;
+.nav-links li:last-child {
+  margin-right: 0;
 }
 
-.nav-links a {
-  transition: all 0.3s ease 0s;
+.nav-links li a {
+  text-decoration: none;
+  color: #42424a;
+  padding: 22px 0;
+  display: inline-block;
+  transition: all ease 0.3s;
+  font-size: 18px;
 }
 
-.nav-links a:hover {
+.nav-links li a:hover {
   color: #e63946;
 }
+
+.nav-links .dropdown-menu {
+  position: absolute;
+  width: 200px;
+  background-color: #ffffff;
+  box-shadow: 0 20px 45px #00000020;
+  margin-top: -50px;
+  opacity: 0;
+  z-index: -999;
+  transition: all ease 0.5s;
+}
+
+.nav-links li:hover .dropdown-menu {
+  z-index: 3;
+  opacity: 1;
+  margin-top: 0;
+}
+
+.nav-links .dropdown-menu li {
+  margin: 0;
+  width: 100%;
+}
+
+.nav-links .dropdown-menu li a {
+  padding: 15px 20px;
+  display: inline-block;
+  width: 100%;
+}
+
+
 
 .menu-button-container {
   display: flex;
@@ -187,6 +234,35 @@ nav {
   border: 2px solid black;
 }
 
+
+/* .dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+} */
 /* Navigation Bar End */
 
 
@@ -388,9 +464,6 @@ Image by <a href="https://pixabay.com/users/12019-12019/?utm_source=link-attribu
   transition: all 0.3s ease 0s;
   color: white;
 }
-
-
-
 
 /* .img-row {
   display: flex;
@@ -737,6 +810,7 @@ exercise-background-col p,
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  padding-bottom: 15px;
 }
 
 .text-exer {
@@ -770,6 +844,23 @@ exercise-background-col p,
 
 .inline {
   display: inline-block;
+}
+
+#exer li {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  /* Adjust the padding to control the box size */
+  margin-top: 1px;
+  margin-bottom: 1px;
+  width: 200px;
+}
+
+#exer li a {
+  color: inherit;
+  /* Inherit the color from the parent */
+  text-decoration: none;
+  /* Remove underlines */
 }
 
 /* --- title card shadow End ---*/
@@ -808,3 +899,371 @@ exercise-background-col p,
   font-size: 18px;
   max-width: 70%;
 }
+
+/* --- format for supplements images --- */
+.sup-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* ---Supplements Page End--- */
+
+/* ---Meal Page Start--- */
+.meal-background-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://fitnessvolt.com/wp-content/uploads/2022/06/3000-Calorie-Meal-Plan.jpg");
+  background-size: cover;
+  height: 655px;
+  position: relative;
+  overflow: hidden;
+}
+
+.meal-background-col h2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  padding: 30px 30px 0px 30px;
+  font-size: 48px;
+  max-width: 70%;
+}
+
+.meal-background-col p {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  padding: 30px 30px 50px 30px;
+  font-size: 18px;
+  max-width: 70%;
+}
+
+/* ------- Meal Images ------- */
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 300px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ------- Meal Shadow Start ------- */
+#meal {
+  text-shadow: 2px 2px 4px rgba(80, 59, 29, 0.5);
+}
+
+meal-background-col p,
+.meal-background-col button {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  padding: 30px 30px 50px 30px;
+  font-size: 18px;
+  max-width: 70%;
+}
+
+.meal-background-col button {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: black;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: white;
+  border: 2px solid black;
+}
+
+.meal-background-col button:hover {
+  background: rgba(48, 48, 48, 1);
+  border: 2px solid rgba(48, 48, 48, 1);
+}
+
+.image-meal {
+  text-align: center;
+  position: relative;
+  width: 450px;
+  /* Set the width to match your image's width */
+  height: 300px;
+  /* Set the height to match your image's height */
+}
+
+.image-centering {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.text-meal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(90%);
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.0);
+  /* Semi-transparent background for text */
+  color: black;
+  text-align: center;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 20px;
+  opacity: 0;
+  /* Initially, text is hidden */
+  transition: opacity 0.3s ease;
+  /* Add a smooth transition effect */
+}
+
+.image-meal:hover img {
+  opacity: 0.5;
+  /* Change the image opacity on hover */
+}
+
+.image-meal:hover .text-meal {
+  opacity: 1;
+  /* Display the text on hover */
+}
+
+.inline {
+  display: inline-block;
+}
+
+/* ---Meal Page End--- */
+
+/* Resources.html Page Start */
+.resources-background-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/img/books.jpg");
+  background-size: cover;
+  height: 655px;
+  position: relative;
+  overflow: hidden;
+}
+
+.resources-background-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.resources-background-col h2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  padding: 30px 30px 0px 30px;
+  font-size: 48px;
+  max-width: 100%;
+}
+
+.resources-background-col p {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  padding: 30px 30px 50px 30px;
+  font-size: 18px;
+  max-width: 100%;
+}
+
+/* links for other websites */
+.options-container-row {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 60px;
+}
+
+.options-container-col ul {
+  list-style: none;
+}
+
+.options-container-col h2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  color: black;
+  padding: 30px 0px 10px 0px;
+  font-size: 48px;
+
+  margin-left: 50px;
+}
+
+.options-container-col p,
+.options-container-col a {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  color: black;
+  padding: 40px 40px 60px 40px;
+  font-size: 18px;
+}
+
+.options-container-col a {
+  margin-left: 50px;
+  padding: 12px 25px;
+  background-color: black;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: white;
+  border: 2px solid black;
+}
+
+.options-container-col a:hover {
+  background: rgba(48, 48, 48, 1);
+  border: 2px solid rgba(48, 48, 48, 1);
+  text-decoration: underline;
+}
+
+
+/* Resources.html Page End */
+
+/* Tips.html Page Start */
+
+
+
+.tip-title {
+  background-color: #0c0354;
+  font-family: 'Kumbh Sans', sans-serif;
+  padding: 15px;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.tip-title h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+
+.tip-title p {
+  max-width: 1000px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 18px;
+}
+
+.tip-button {
+  height: 70px;
+  width: 150px;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 35px;
+  font-size: 24px;
+}
+
+#rand-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0c0354;
+  padding-bottom: 50px;
+  position: relative;
+  text-align: center;
+  /* height: 700px; */
+}
+
+
+#rand-gen {
+  max-width: 100%;
+  max-height: 600px;
+}
+
+#image-wrapper {
+  position: relative;
+  display: inline-block;
+  /* To make the container only as wide as the image */
+}
+
+
+#quote-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  font-family: 'Candal';
+  font-size: 22px;
+  text-transform: uppercase;
+  font-size: 30px;
+  text-shadow: 2px 2px #131313;
+  background-color: rgba(255, 255, 255, 0.0);
+  /* Add a semi-transparent white background */
+  text-align: center;
+  padding-top: 450px;
+  /* Adjust padding as needed */
+  overflow: hidden;
+  /* Hide any text that overflows */
+  /*white-space: nowrap; /* Prevent text from wrapping */
+
+
+
+}
+
+
+/* Tips.html Page End */

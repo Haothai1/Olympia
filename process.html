@@ -14,26 +14,47 @@
 </head>
 
 <body>
-  <!-- Creates tittle -->
-  <h1>Olympia</h1>
-
   <!-- Creates a navigation bar for the page and linking each html page together -->
-
-  <nav>
-    <li><a href=index.html>Home</a></li>
-    <!--<li><a href=process.html>Process</a></li>
+  <header>
+    <!-- Creates tittle -->
+    <a href="https://olympia.haothai2.repl.co/index.html">
+      <img class="logo" src="img/Group25.svg" alt="Company " width="200" height=50">
+    </a>
+    <nav class="nav-links">
+      <!--  class="nav-links" -->
+      <li><a href="index.html">Home</a></li>
+      <!--<li><a href=process.html>Process</a></li>
     -->
-    <!-- <li><a href=goal.html>Goals</a></li> -->
-    <!-- <li><a href=routine.html>Routine</a></li> -->
-    <li><a href=meal.html>Meal Plan</a></li>
-    <li><a href=exercises.html>Exercises</a></li>
-    <li><a href=tips.html>Workout Tips</a></li>
-    <li><a href=supplements.html>Supplements</a></li>
-    <li><a href=resources.html>Resources</a></li>
-    <li><a href=about.html>About Us</a></li>
+      <!-- <li><a href=goal.html>Goals</a></li> -->
+      <!-- <li><a href=routine.html>Routine</a></li> -->
+      <li>
+        <a href="meal.html">Meal Plan</a>
+        <ul class="dropdown-menu">
+          <li><a href="supplements.html">Supplements</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="exercises.html">Exercises</a>
+        <ul class="dropdown-menu">
+          <li><a href="tips.html">Workout Tips</a></li>
 
-    <li><a href=tester.html> Tester Page </a></li>
-  </nav>
+        </ul>
+      </li>
+      <li><a href="resources.html">Resources</a></li>
+
+      <li><a href="about.html">About Us</a></li>
+
+
+
+      <!-- <li><a href=tester.html> Tester Page </a></li> -->
+    </nav>
+    <!-- Register and Sign-in button; Placed outside to group elements separately from navigation links -->
+
+    <div class="menu-button-container">
+      <a href="#"><button class="menu-button">Sign up</button></a>
+      <a href="#"><button class="menu-button">Sign in</button></a>
+    </div>
+  </header>
 
   <script src="script.js"></script>
 

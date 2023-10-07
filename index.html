@@ -17,22 +17,37 @@
 <body>
 
 
-  <!-- Creates a navigation bar for the page and linking each html page together -->
+ <!-- Creates a navigation bar for the page and linking each html page together -->
   <header>
     <!-- Creates tittle -->
-    <img class="logo" src="img/logo.png" alt="Company " width="200" height=50">
+    <a href="https://olympia.haothai2.repl.co/index.html">
+      <img class="logo" src="img/Group25.svg" alt="Company " width="200" height=50">
+    </a>
     <nav class="nav-links">
+      <!--  class="nav-links" -->
       <li><a href="index.html">Home</a></li>
       <!--<li><a href=process.html>Process</a></li>
     -->
       <!-- <li><a href=goal.html>Goals</a></li> -->
       <!-- <li><a href=routine.html>Routine</a></li> -->
-      <li><a href="meal.html">Meal Plan</a></li>
-      <li><a href="exercises.html">Exercises</a></li>
-      <li><a href="tips.html">Workout Tips</a></li>
-      <li><a href="supplements.html">Supplements</a></li>
+      <li>
+        <a href="meal.html">Meal Plan</a>
+        <ul class="dropdown-menu">
+          <li><a href="supplements.html">Supplements</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="exercises.html">Exercises</a>
+        <ul class="dropdown-menu">
+          <li><a href="tips.html">Workout Tips</a></li>
+
+        </ul>
+      </li>
       <li><a href="resources.html">Resources</a></li>
+
       <li><a href="about.html">About Us</a></li>
+
+
 
       <!-- <li><a href=tester.html> Tester Page </a></li> -->
     </nav>
@@ -42,9 +57,6 @@
       <a href="#"><button class="menu-button">Sign up</button></a>
       <a href="#"><button class="menu-button">Sign in</button></a>
     </div>
-
-
-
   </header>
 
 
@@ -148,7 +160,8 @@
       <p>Random Text</p>
       <ul class="social-icons">
         <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="https://twitter.com/X?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://twitter.com/X?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i
+              class="fa fa-twitter"></i></a></li>
         <li><a href="https://www.google.com/"><i class="fa fa-google-plus"></i></a></li>
         <li><a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a></li>
         <li><a href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin-square"></i></a></li>
@@ -162,7 +175,7 @@
 
 
 
-<!-- This is a note
+  <!-- This is a note
  -->
   <!--
   This script places a badge on your repl's full-browser view back to your repl's cover

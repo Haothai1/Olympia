@@ -20,19 +20,34 @@
   <!-- Creates a navigation bar for the page and linking each html page together -->
   <header>
     <!-- Creates tittle -->
-    <img class="logo" src="img/logo.png" alt="Company " width="200" height=50">
+    <a href="https://olympia.haothai2.repl.co/index.html">
+      <img class="logo" src="img/Group25.svg" alt="Company " width="200" height=50">
+    </a>
     <nav class="nav-links">
+      <!--  class="nav-links" -->
       <li><a href="index.html">Home</a></li>
       <!--<li><a href=process.html>Process</a></li>
     -->
       <!-- <li><a href=goal.html>Goals</a></li> -->
       <!-- <li><a href=routine.html>Routine</a></li> -->
-      <li><a href="meal.html">Meal Plan</a></li>
-      <li><a href="exercises.html">Exercises</a></li>
-      <li><a href="tips.html">Workout Tips</a></li>
-      <li><a href="supplements.html">Supplements</a></li>
+      <li>
+        <a href="meal.html">Meal Plan</a>
+        <ul class="dropdown-menu">
+          <li><a href="supplements.html">Supplements</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="exercises.html">Exercises</a>
+        <ul class="dropdown-menu">
+          <li><a href="tips.html">Workout Tips</a></li>
+
+        </ul>
+      </li>
       <li><a href="resources.html">Resources</a></li>
+
       <li><a href="about.html">About Us</a></li>
+
+
 
       <!-- <li><a href=tester.html> Tester Page </a></li> -->
     </nav>
@@ -42,80 +57,80 @@
       <a href="#"><button class="menu-button">Sign up</button></a>
       <a href="#"><button class="menu-button">Sign in</button></a>
     </div>
-
-
-
   </header>
 
   <script src="script.js"></script>
 
 
-  <hr>
-  <!-- Main page section-->
-  <h2>More on Healthy Meals</h2>
-  <p>
-    Learn more about eatting healthy meals.
-  </p>
+  <div class="resources-background-row">
+    <div class="resources-background-col">
+      <!-- Main page section-->
+      <h2>Resources</h2>
 
-  <button>Learn More</button>
-  <p>(Image on right,gray background)</p>
-  <img class="fit-picture"
-    src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQwr59YF0Ujesobg8D0yk-wv1xnUwDgf00bY7BVRFL6riHEB_Q9TwejyiAfVNOAIEqb-ArcmEvBqqiRIT8"
-    alt="Grapefruit slice atop a pile of other slices" width="389" height="250">
-  <hr>
-
+      <p>
+        Want to learn more? Check out our resources below!
+      </p>
+    </div>
+  </div>
+  <!-- image: https://www.freepik.com/free-photo/social-network-connection-avatar-icon-vector_16461892.htm#query=resources&position=3&from_view=search&track=sph -->
   <!-- Content 2-->
-  <h2>Read related Articles</h2>
 
+  <div class="options-container-row">
+    <div class="options-container-col">
+      <h2>Read more related Articles</h2>
+      <ul>
+        <li><a href="https://www.health.harvard.edu/topics/exercise-and-fitness">Harvard health</a></li>
+        <li><a href="https://www.everydayhealth.com/fitness/all-articles/">Everyday Health</a></li>
+        <li><a href="https://www.helpguide.org/articles/healthy-living/the-mental-health-benefits-of-exercise.htm">Help
+            Guide.org</a></li>
+        <li><a href="https://time.com/4474874/exercise-fitness-workouts/">Time</a></li>
+        <li><a href="https://kidshealth.org/en/teens/exercise-wise.html">Teens Health</a></li>
 
-  <button>Learn More</button>
-  <p>(Image on right,gray background)</p>
-  <img class="fit-picture"
-    src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQwr59YF0Ujesobg8D0yk-wv1xnUwDgf00bY7BVRFL6riHEB_Q9TwejyiAfVNOAIEqb-ArcmEvBqqiRIT8"
-    alt="Grapefruit slice atop a pile of other slices" width="389" height="250">
-  <hr>
+      </ul>
+    </div>
+  </div>
+
   <!-- Content 3-->
-  <h2>Read Motivational Quotes</h2>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
 
-  <button>Learn More</button>
-  <p>(Image on right,gray background)</p>
-  <img class="fit-picture"
-    src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQwr59YF0Ujesobg8D0yk-wv1xnUwDgf00bY7BVRFL6riHEB_Q9TwejyiAfVNOAIEqb-ArcmEvBqqiRIT8"
-    alt="Grapefruit slice atop a pile of other slices" width="389" height="250">
-  <hr>
+  <div class="options-container-row">
+    <div class="options-container-col">
+      <h2>Read Motivational Quotes</h2>
+      <ul>
+        <li><a href="https://upperhand.com/50-motivational-workout-quotes/">Upper Hand</a></li>
+        <li><a href="https://parade.com/1045407/marynliles/fitness-quotes/">Parade</a></li>
+        <li><a href="https://marathonhandbook.com/workout-quotes/">Marathon Handbook</a></li>
+        <li><a href="https://www.menshealth.com/fitness/a19547200/best-fitness-quotes-of-all-time/">Men's Health</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
   <!-- Content 4-->
-  <h2>Other Website Resources</h2>
-  <div>
-    <ol>
-      <li>Bodybuilding.com</li>
-      <li>MyFitnessPal</li>
-      <li>T-Nation </li>
-      <li>Fitness Blender </li>
-      <li>Darebee </li>
-      <li>Men's Health & Women's Health Magazines </li>
-      <li>Athlean-X</li>
-      <li>StrongLifts</li>
-      <li>Yoga Journal</li>
-      <li>Nerd Fitness</li>
 
-    </ol>
+  <div class="options-container-row">
+    <div class="options-container-col">
+      <h2>Other Website Resources</h2>
+      <ul>
+        <li><a href="https://www.bodybuilding.com/">Bodybuilding.com</a></li>
+        <li><a href="https://www.myfitnesspal.com/">MyFitnessPal</a></li>
+        <li><a href="https://www.t-nation.com/">T-Nation</a></li>
+        <li><a href="https://www.eatthis.com/healthy-eating/">Eatthis</a></li>
+        <li><a href="https://www.bodybuilding.com/">Darebee</a></li>
+        <li><a href="https://www.menshealth.com/">Men's Health</a></li>
+        <li><a href="https://www.womenshealthmag.com/fitness/">Women's Health</a></li>
+        <li><a href="https://stronglifts.com/">StrongLifts</a></li>
+        <li><a href="https://www.yogajournal.com/poses/yoga-by-benefit/fitness/">Yoga Journal</a></li>
+        <li><a href="https://www.nerdfitness.com/blog/beginner-body-weight-workout-burn-fat-build-muscle/">Nerd
+            Fitness</a></li>
+
+
+      </ul>
+    </div>
   </div>
 
 
-  <button>Learn More</button>
-  <p>(Image on right,gray background)</p>
-  <img class="fit-picture"
-    src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQwr59YF0Ujesobg8D0yk-wv1xnUwDgf00bY7BVRFL6riHEB_Q9TwejyiAfVNOAIEqb-ArcmEvBqqiRIT8"
-    alt="Grapefruit slice atop a pile of other slices" width="389" height="250">
-  <hr>
-  <h2>Sources</h2>
-  <p></p>
+
+
 
   <!--
   This script places a badge on your repl's full-browser view back to your repl's cover
@@ -131,7 +146,8 @@
       <p>Random Text</p>
       <ul class="social-icons">
         <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="https://twitter.com/X?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://twitter.com/X?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i
+              class="fa fa-twitter"></i></a></li>
         <li><a href="https://www.google.com/"><i class="fa fa-google-plus"></i></a></li>
         <li><a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a></li>
         <li><a href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin-square"></i></a></li>
