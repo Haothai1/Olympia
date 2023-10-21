@@ -322,6 +322,10 @@ Image by <a href="https://pixabay.com/users/12019-12019/?utm_source=link-attribu
   border: 2px solid black;
 }
 
+.main-background-col button a {
+  color: white;
+}
+
 .main-background-col button:hover {
   background: rgba(48, 48, 48, 1);
   border: 2px solid rgba(48, 48, 48, 1);
@@ -594,8 +598,6 @@ Image by <a href="https://pixabay.com/users/12019-12019/?utm_source=link-attribu
   flex-wrap: wrap;
   flex-direction: column;
   font-weight: 500;
-
-
 }
 
 .main-s5-container-col p,
@@ -853,7 +855,21 @@ exercise-background-col p,
   /* Adjust the padding to control the box size */
   margin-top: 1px;
   margin-bottom: 1px;
-  width: 200px;
+  width: 270px;
+  position: relative;
+}
+
+#exer li::after {
+  content: '';
+  /* Empty content to create the pseudo-element */
+  position: absolute;
+  top: 0;
+  right: -14px;
+  /* Adjust this value to control the size of the chevron */
+  border-top: 19px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 15px solid black;
+  /* Adjust the size and color as needed */
 }
 
 #exer li a {
@@ -931,6 +947,12 @@ exercise-background-col p,
   padding: 30px 30px 0px 30px;
   font-size: 48px;
   max-width: 70%;
+}
+
+.meal-background-col h4 {
+  margin-top: 20px;
+  margin-left: 40px;
+  text-align: center;
 }
 
 .meal-background-col p {
