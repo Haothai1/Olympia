@@ -11,71 +11,112 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Olympia</title>
+  <link rel="icon" href="/img/home/group24.svg">
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&family=Montserrat:wght@500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 
 <body>
   <!-- Creates a navigation bar for the page and linking each html page together -->
   <header>
-    <!-- Creates tittle -->
-    <a href="https://olympia.haothai2.repl.co/index.html">
-      <img class="logo" src="img/Group25.svg" alt="Company " width="200" height=50">
-    </a>
-    <nav class="nav-links">
-      <!--  class="nav-links" -->
-      <li><a href="index.html">Home</a></li>
-      <!--<li><a href=process.html>Process</a></li>
-    -->
-      <!-- <li><a href=goal.html>Goals</a></li> -->
-      <!-- <li><a href=routine.html>Routine</a></li> -->
-      <li>
-        <a href="meal.html">Meal Plan</a>
-        <ul class="dropdown-menu">
-          <li><a href="supplements.html">Supplements</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="exercises.html">Exercises</a>
-        <ul class="dropdown-menu">
-          <li><a href="tips.html">Inspiration</a></li>
-
-        </ul>
-      </li>
-      <li><a href="resources.html">Resources</a></li>
-
-      <li><a href="about.html">About Us</a></li>
+    <nav
+      class="flex items-center justify-between h-24 bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 nav-links">
+      <div class="flex justify-between w-full flex-wrap items-center justify-between mx-auto p-4">
+        <div class="flex items-center justify-center mx-auto">
+          <a href="https://olympia.haothai2.repl.co/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img class="logo" src="img/home/group25.svg" alt="Company" width="200" height="50">
+          </a>
+          <button data-collapse-toggle="navbar-sticky" type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600 ml-auto"
+            aria-controls="navbar-sticky" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          </button>
+          <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ml-auto">
 
 
 
-      <!-- <li><a href=tester.html> Tester Page </a></li> -->
+
+            <div class="hidden w-full md:flex md:w-auto" id="navbar-sticky">
+              <!-- Update the background color class from bg-gray-50 to bg-white -->
+              <ul
+                class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-white md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 dark:border-gray-700">
+                <li>
+                  <a href="index.html"
+                    class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                    aria-current="page">Home</a>
+                </li>
+                <li class="relative group">
+                  <a href="meal.html"
+                    class="md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                    Meals
+                  </a>
+                  <!-- Dropdown menu -->
+                  <div
+                    class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg absolute top-full left-0 mt-0">
+                    <ul class="py-2 text-sm ">
+                      <li>
+                        <a href="supplements.html" class="block px-4 py-2">Supplements</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="relative group">
+                  <a href="exercises.html"
+                    class="md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                    Exercises
+                  </a>
+                  <!-- Dropdown menu -->
+                  <div
+                    class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg absolute top-full left-0 mt-0">
+                    <ul class="py-2 text-sm">
+                      <li>
+                        <a href="tips.html" class="block px-4 py-2">Inspiration</a>
+                      </li>
+                      <li>
+                        <a href="workouttips.html" class="block px-4 py-2">Workout Tips</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="resources.html"
+                    class="group-hover-bg-gray-100 md:hover-bg-transparent md:hover-text-blue-700 md:p-0 md:bg-white dark:text-white dark:hover-bg-gray-700 dark:hover-text-white md:dark:hover-bg-transparent dark:border-gray-700">
+                    Resources
+                  </a>
+                </li>
+                <li>
+                  <a href="about.html"
+                    class="group-hover-bg-gray-100 md:hover-bg-transparent md:hover-text-blue-700 md:p-0 md:bg-white dark:text-white dark:hover-bg-gray-700 dark:hover-text-white md:dark:hover-bg-transparent dark:border-gray-700">
+                    About Us
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
     </nav>
-    <!-- Register and Sign-in button; Placed outside to group elements separately from navigation links -->
-
-    <div class="menu-button-container">
-      <a href="#"><button class="menu-button">Sign up</button></a>
-      <a href="#"><button class="menu-button">Sign in</button></a>
-    </div>
   </header>
-
-  <script src="script.js"></script>
 
   <div class="meal-background-row">
     <div class="meal-background-col">
       <!-- Main page section-->
 
-      <h4> Learn about meal plans to help you maximize
-        your gains.</h4>
+        <p class="supplements-p mx-auto" style="color: black;"> Learn about meals to help you maximize
+        your gains.</p>
 
     </div>
   </div>
 
-  <h2 style="margin-top: 20px; margin-bottom: 20px; text-align:center"> Which courses would you like to prepare first?
+  <h2 class="meal-h2"> Which courses would you like to prepare first?
   </h2>
 
   <div class="image-centering">
@@ -106,329 +147,578 @@
   </div>
 
   <hr>
-  <h1 id="Breakfast" style="margin-top: 20px; margin-bottom: 20px; text-align: center;">Breakfast</h1>
+  <h1 class="meal-h1" id="Breakfast">Breakfast</h1>
 
-  <p style="margin-left: 200px; margin-right: 200px; margin-bottom: 50px; text-align: center;">
+  <h3 class="meal-h3">
     Everyone knows that breakfast is the most important meal of the day. How you start your morning determines how the
-    rest of yourday will go, so be sure to start it with one of these healthy breakfasts to make the most out of your
+    rest of your day will go, so be sure to start it with one of these healthy breakfasts to make the most out of your
     workouts.
-  </p>
+  </h3>
 
-  <!--- Breakfast Image Gallery --->
-  <div class="responsive">
-    <div class="gallery">
-      <a href="https://www.eatingwell.com/recipe/269838/spinach-egg-scramble-with-raspberries/" target="_blank">
-        <img
-          src="https://www.eatingwell.com/thmb/G8cY60dP6iou87DFcXWl--O7qQg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/6183602-b3e4206d75dd4925954984e0745bac58.jpg"
-          alt="Break1">
-      </a>
-      <div class="desc">
-        <h4>Spinach & Egg Scramble with Raspberries</h4><br>This meal combines protein-packed eggs and superfood
-        raspberries with filling whole-grain toast and nutrient-rich spinach.<br><br>View the full recipe <a
-          style="color: blue;" href="https://www.eatingwell.com/recipe/269838/spinach-egg-scramble-with-raspberries/"
-          target="_blank">here</a>
+  <!--- Breakfast Image Gallery Start--->
+  <!-- First row for recipe -->
+
+  <!-- Break1 -->
+  <span id="baseB">
+    <div class="container-recipe">
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://www.eatingwell.com/recipe/269838/spinach-egg-scramble-with-raspberries/" target="_blank">
+            <img
+              src="https://www.eatingwell.com/thmb/G8cY60dP6iou87DFcXWl--O7qQg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/6183602-b3e4206d75dd4925954984e0745bac58.jpg"
+              alt="Break1">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">Spinach & Egg Scramble with Raspberries</h4>This meal combines protein-packed eggs
+            and superfood
+            raspberries with filling whole-grain toast and nutrient-rich spinach.<br><br>View the full recipe <a
+              style="color: blue;"
+              href="https://www.eatingwell.com/recipe/269838/spinach-egg-scramble-with-raspberries/"
+              target="_blank">here</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Break2 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://www.taste.com.au/recipes/cinnamon-banana-porridge/758d6ce8-e9e3-4edc-ae1c-0d4632e339f5?r=healthy/bx9qc7tf"
+            target="_blank">
+            <img
+              src="https://img.taste.com.au/6vBNCTGn/w720-h480-cfill-q80/taste/2016/11/cinnamon-and-banana-porridge-93067-1.jpeg"
+              alt="Break2">
+          </a>
+          <div class="desc">
+
+            <h4 class="meal-h4">Cinnamon and Banana Porridge</h4><br>An easy, low-calorie and high protein breakfast
+            idea to start
+            your morning off just right.
+            <br><br><br>View the full recipe <a style="color: blue;"
+              href="https://www.taste.com.au/recipes/cinnamon-banana-porridge/758d6ce8-e9e3-4edc-ae1c-0d4632e339f5?r=healthy/bx9qc7tf"
+              target="_blank">here</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Break3 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://www.eatthis.com/breakfasts-for-rapid-weight-loss/" target="_blank">
+            <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2023/04/strawberry-kiwi-yogurt.jpg"
+              alt="Break3">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">Yogurt Parfait</h4><br>Starting off your day with a healthy delicious yogurt is sure
+            to get you
+            ready for the day ahead of you.<br><br><br>View the full recipe <a style="color: blue;"
+              href="https://www.eatthis.com/breakfasts-for-rapid-weight-loss/" target="_blank">here</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Break4 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://healthyfitnessmeals.com/blueberry-coconut-chia-pudding/" target="_blank">
+            <img
+              src="https://healthyfitnessmeals.com/wp-content/uploads/2023/07/blueberry-coconut-chia-pudding-square-300x300.jpg"
+              alt="Break4">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">Layered Blueberry Coconut Chia Pudding</h4>This meal is a healthy and flavorful way
+            to start the
+            day!
+            This easy breakfast is dairy-free and gluten-free. <br><br>View the full recipe <a style="color: blue;"
+              href="https://healthyfitnessmeals.com/blueberry-coconut-chia-pudding/" target="_blank">here</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </span>
+  <!-- Show more btn: Hides content #1 -->
+  <span id="moreB" class="moreInfo">
+    <!-- Second row for recipe -->
+    <div class="container-recipe">
 
-  <div class="responsive">
-    <div class="gallery">
-      <a href="https://www.taste.com.au/recipes/cinnamon-banana-porridge/758d6ce8-e9e3-4edc-ae1c-0d4632e339f5?r=healthy/bx9qc7tf"
-        target="_blank">
-        <img
-          src="https://img.taste.com.au/6vBNCTGn/w720-h480-cfill-q80/taste/2016/11/cinnamon-and-banana-porridge-93067-1.jpeg"
-          alt="Break2">
-      </a>
-      <div class="desc">
-        <h4>Cinnamon and Banana Porridge</h4><br>An easy, low-calorie and high protein breakfast idea to start
-        your
-        morning off just right.
-        <br><br><br><br>View the full recipe <a style="color: blue;"
-          href="https://www.taste.com.au/recipes/cinnamon-banana-porridge/758d6ce8-e9e3-4edc-ae1c-0d4632e339f5?r=healthy/bx9qc7tf"
-          target="_blank">here</a>
+      <!-- Break5 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://www.eatingwell.com/recipe/270489/sriracha-egg-avocado-overnight-oats/" target="_blank">
+            <img
+              src="https://www.eatingwell.com/thmb/ZvnfwXXI0ILe8NAgyKwyPSgcn8U=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/6343095-903c372634384b569149a2ecd3f3d422.jpg"
+              alt="Break5">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">Sriracha, Egg & Avocado Overnight Oats</h4>This oats and fried egg breakfast is the
+            perfect way
+            to
+            stat your morning. Top it with avocado and Sriracha for a delicious breakfast. <br><br>View the
+            full recipe <a style="color: blue;"
+              href="https://www.eatingwell.com/recipe/270489/sriracha-egg-avocado-overnight-oats/"
+              target="_blank">here</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="responsive">
-    <div class="gallery">
-      <a href="https://www.eatthis.com/breakfasts-for-rapid-weight-loss/" target="_blank">
-        <img
-          src="https://www.eatthis.com/wp-content/uploads/sites/4/2023/04/strawberry-kiwi-yogurt.jpg?quality=82&strip=all&w=640"
-          alt="Break3">
-      </a>
-      <div class="desc">
-        <h4>Yogurt Parfait</h4><br>Starting off your day with a healthy delicious yogurt is sure to get you ready for
-        the day ahead of you.<br><br><br><br>View the full recipe <a style="color: blue;"
-          href="https://www.eatthis.com/breakfasts-for-rapid-weight-loss/" target="_blank">here</a>
+      <!-- Break6 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://www.eatingwell.com/recipe/254618/raspberry-peach-mango-smoothie-bowl/" target="_blank">
+            <img
+              src="https://www.eatingwell.com/thmb/PjKwps3pUT3Tg0UEP5MOBDK3D2Q=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/3759411-d0c3ebc1a42b44eb81b171a8d53816f8.jpg"
+              alt="Break6">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">Raspberry-Peach-Mango Smoothie Bowl</h4>This healthy smoothie recipe is very easy to
+            make. Use
+            whatever fruit, nuts and seeds you like best to make it your own. <br><br>View the full recipe <a
+              style="color: blue;" href="https://www.eatingwell.com/recipe/254618/raspberry-peach-mango-smoothie-bowl/"
+              target="_blank">here</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="responsive">
-    <div class="gallery">
-      <a href="https://healthyfitnessmeals.com/blueberry-coconut-chia-pudding/" target="_blank">
-        <img
-          src="https://healthyfitnessmeals.com/wp-content/uploads/2023/07/blueberry-coconut-chia-pudding-square-300x300.jpg"
-          alt="Break4">
-      </a>
-      <div class="desc">
-        <h4>Layered Blueberry Coconut Chia Pudding</h4><br>This meal is a healthy and flavorful way to start the day!
-        This easy breakfast is dairy-free and gluten-free. <br><br><br>View the full recipe <a style="color: blue;"
-          href="https://healthyfitnessmeals.com/blueberry-coconut-chia-pudding/" target="_blank">here</a>
+      <!-- Break7 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://www.eatingwell.com/recipe/267169/avocado-egg-toast/" target="_blank">
+            <img
+              src="https://www.eatingwell.com/thmb/M1DBDNIoqh8kcmGcm9TQAKKPISQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/5631902-45a6c2024ccb4b75bbb4a411ea87d6c0.jpg"
+              alt="Break7">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">Avocado-Egg Toast</h4><br>You can never go wrong with a classic avocodo toast.
+            Topping avocado
+            toast with an egg is a near-perfect breakfast. <br><br>View the full recipe <a style="color: blue;"
+              href="https://www.eatingwell.com/recipe/267169/avocado-egg-toast/" target="_blank">here</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <!---
-  <div class="responsive">
-    <div class="gallery">
-      <a href="https://healthyfitnessmeals.com/blueberry-coconut-chia-pudding/" target="_blank">
-        <img
-          src="https://healthyfitnessmeals.com/wp-content/uploads/2023/07/blueberry-coconut-chia-pudding-square-300x300.jpg"
-          alt="Break4">
-      </a>
-      <div class="desc">
-        <h4>Layered Blueberry Coconut Chia Pudding</h4><br>This meal is a healthy and flavorful way to start the day!
-        This easy breakfast is dairy-free and gluten-free. <br><br><br>View the full recipe <a style="color: blue;"
-          href="https://healthyfitnessmeals.com/blueberry-coconut-chia-pudding/" target="_blank">here</a>
+      <!-- Break8 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://www.eatingwell.com/recipe/7882770/spinach-omelet/" target="_blank">
+            <img
+              src="https://www.eatingwell.com/thmb/swYIy2dNcB-unz6-Pth_WGK80SQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ten-minute-spinach-omelet-2000-ef8499a54f7447c297192772cac07c90.jpg"
+              alt="Break8">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">10-Minute Spinach Omelet</h4><br>This delicious spinach omelet recipe is ready in
+            just 10 minutes
+            for a nutritious breakfast. Eggs and cheese help pack it with protein. <br><br>View the full recipe <a
+              style="color: blue;" href="https://www.eatingwell.com/recipe/7882770/spinach-omelet/"
+              target="_blank">here</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  
-  <div class="responsive">
-    <div class="gallery">
-      <a href="https://healthyfitnessmeals.com/blueberry-coconut-chia-pudding/" target="_blank">
-        <img
-          src="https://healthyfitnessmeals.com/wp-content/uploads/2023/07/blueberry-coconut-chia-pudding-square-300x300.jpg"
-          alt="Break4">
-      </a>
-      <div class="desc">
-        <h4>Layered Blueberry Coconut Chia Pudding</h4><br>This meal is a healthy and flavorful way to start the day!
-        This easy breakfast is dairy-free and gluten-free. <br><br><br>View the full recipe <a style="color: blue;"
-          href="https://healthyfitnessmeals.com/blueberry-coconut-chia-pudding/" target="_blank">here</a>
-      </div>
-    </div>
-  </div>
-  --->
 
+    </div>
+  </span>
+  <!-- Show more 1 -->
+  <div class="btn-container">
+    <button id="breakfastBtn" class="moreBtn">Read more</button>
+  </div>
   <div class="clearfix"></div>
+
   <!--- Breakfast Image Gallery End --->
 
-  <!-- Content 2-->
 
-  <div class="options-container-row">
-    <div class="options-container-col">
-      <br>
-      <h3 style="margin-left: 50px;">Browse more breakfast options provided by the resources above!</h3>
-      <ul>
-        <li><a
-            href="https://www.eatingwell.com/gallery/12907/healthy-recipes-for-breakfast-foods-to-help-you-lose-weight/"
-            target="_blank">Eating Well</a></li>
-        <li><a href="https://www.taste.com.au/healthy/galleries/healthy-breakfast-ideas-weight-loss-2/bx9qc7tf"
-            target="_blank">Taste</a></li>
-        <li><a href="https://www.eatthis.com/breakfasts-for-rapid-weight-loss/" target="_blank">EatThis</a></li>
-        <li><a href="https://healthyfitnessmeals.com/category/breakfast/" target="_blank">Health Fitness Meals</a></li>
-
-      </ul>
-    </div>
-  </div>
 
 
   <!--- Lunch Image Gallery --->
-  <hr>
-  <h1 id="Lunch" style="margin-top: 20px; margin-bottom: 20px; text-align: center;">Lunch</h1>
 
-  <p style="margin-left: 200px; margin-right: 200px; margin-bottom: 50px; text-align: center;">
+  <hr>
+  <h1 class="meal-h1" id="Lunch">Lunch</h1>
+
+  <h3 class="meal-h3">
     Proper nutrition is critical to overall good health, so don't skip your mid-day meal just because you're working
     out! Not only is it important to properly fuel up before a workout, but you also need to recharge your body with
     healthy proteins and carbs afterward.
-  </p>
+  </h3>
 
-  <div class="responsive">
-    <div class="gallery">
-      <a href="https://vshred.com/blog/lunch-ideas-easy-healthy/" target="_blank">
-        <img
-          src="https://i0.wp.com/vshred.com/blog/wp-content/uploads/2018/11/Healthy-Homemade-Sofritas-Tofu-Tacos-lunch-ideas-ss.jpg?resize=625%2C400&ssl=1"
-          alt="Lunch1">
-      </a>
-      <div class="desc">
-        <h4>Scrambled Tofu Tacos</h4><br>Forget that greasy, calorie-packed Mexican fast-food chain you go to for lunch.
-        Instead, try these healthy, delicious, scrambled tofu tacos. <br><br>View the full recipe <a
-          style="color: blue;" target="_blank" href="https://vshred.com/blog/lunch-ideas-easy-healthy/">here</a>
+  <!-- First Container for Lunch -->
+  <span id="baseL">
+    <div class="container-recipe">
+      <!-- Lunch1 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://vshred.com/blog/lunch-ideas-easy-healthy/" target="_blank">
+            <img
+              src="https://i0.wp.com/vshred.com/blog/wp-content/uploads/2018/11/Healthy-Homemade-Sofritas-Tofu-Tacos-lunch-ideas-ss.jpg"
+              alt="Lunch1">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">Scrambled Tofu Tacos</h4>Forget that greasy, calorie-packed Mexican fast-food chain
+            you go to for
+            lunch. Instead, try these healthy, delicious, scrambled tofu tacos. <br><br><br>View the full recipe <a
+              style="color: blue;" target="_blank" href="https://vshred.com/blog/lunch-ideas-easy-healthy/">here</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lunch2 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://www.bbcgoodfood.com/recipes/spicy-fish-stew" target="_blank">
+            <img
+              src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/jamaican-fish-stew-440-400-9ba6282.jpg"
+              alt="Lunch2">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">Spicy Fish Stew</h4>Full of omega-3 fats and providing four of your 5-a-day, this
+            healthy dinner is
+            packed with flavorful ingredients including garlic, salmon fillets and herbs. <br><br>View the full recipe
+            <a style="color: blue;" href="https://www.bbcgoodfood.com/recipes/spicy-fish-stew" target="_blank">here</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lunch3 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://www.myprotein.com/thezone/recipe/spicy-chicken-with-couscous-macro-balanced-meals/"
+            target="_blank">
+            <img
+              src="https://static.thcdn.com/images/v2/app/uploads/sites/478/2019/12/Spicy-Chicken-ARTICLE_1577793747.jpg"
+              alt="Lunch3">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">Spicy Chicken With Couscous</h4>This spicy chicken recipe is bursting with flavor
+            and is a simple
+            way
+            to liven up plain old chicken and rice meal prep. <br><br><br>View the full recipe <a style="color: blue;"
+              href="https://www.myprotein.com/thezone/recipe/spicy-chicken-with-couscous-macro-balanced-meals/"
+              target="_blank">here</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lunch4 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://www.muscleandstrength.com/recipes/high-protein-tuna-bake-pasta" target="_blank">
+            <img
+              src="https://cdn.muscleandstrength.com/sites/default/files/field/feature-image/recipe/tuna-bake-feature.jpg"
+              alt="Lunch4">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">Tuna Bake Pasta</h4>This high protein tuna bake recipe is a delicious dish that is
+            perfect
+            post-workout, easy to make and only requires some simple household ingredients! <br><br>View the full recipe
+            <a style="color: blue;" href="https://www.muscleandstrength.com/recipes/high-protein-tuna-bake-pasta"
+              target="_blank">here</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </span>
+  <!-- Show more btn: Hides content #2 -->
+  <span id="moreL" class="moreInfo">
+    <!-- Second Container for Lunch -->
+    <div class="container-recipe">
+      <!-- Lunch5 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://www.muscleandstrength.com/recipes/high-protein-chicken-burrito-bowl" target="_blank">
+            <img
+              src="https://cdn.muscleandstrength.com/sites/default/files/field/feature-image/recipe/burrito-bowl-feature.jpg"
+              alt="Lunch5">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">High Protein Chicken Burrito Bowl</h4>Mexican seasoned chicken, cilantro lime
+            rice, guacamole,
+            what more do you need? Get your healthy on with this delicious chicken burrito bowl! <br><br><br>View the full
+            recipe <a style="color: blue;" target="_blank"
+              href="https://www.muscleandstrength.com/recipes/high-protein-chicken-burrito-bowl">here</a>
+          </div>
+        </div>
+      </div>
 
-  <div class="responsive">
-    <div class="gallery">
-      <a href="https://www.muscleandstrength.com/recipes/high-protein-tuna-bake-pasta" target="_blank">
-        <img
-          src="https://cdn.muscleandstrength.com/sites/default/files/field/feature-image/recipe/tuna-bake-feature.jpg"
-          alt="Lunch2">
-      </a>
-      <div class="desc">
-        <h4>Tuna Bake Pasta</h4><br>This high protein tuna bake recipe is a delicious dish that is perfect post-workout,
-        easy to make and only requires some simple household ingredients!
-        <br><br>View the full recipe <a style="color: blue;"
-          href="https://www.muscleandstrength.com/recipes/high-protein-tuna-bake-pasta" target="_blank">here</a>
+      <!-- Lunch6 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://www.myprotein.com/thezone/recipe/buffalo-chicken-3-day-chicken-meal-prep/" target="_blank">
+            <img
+              src="https://static.thcdn.com/images/v2/app/uploads/sites/478/2019/06/Buffalo-chicken-1800x1200-minopt_blog_1573554985.jpg"
+              alt="Lunch6">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">Buffalo Chicken Pasta Salad</h4>Looking to spice up your lunches? Then up your
+            meal prep game
+            with
+            this macro-friendly and super easy-to-make buffalo chicken recipe.<br><br><br>View the full recipe <a
+              style="color: blue;"
+              href="https://www.myprotein.com/thezone/recipe/buffalo-chicken-3-day-chicken-meal-prep/"
+              target="_blank">here</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lunch7 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://www.bbcgoodfood.com/recipes/moroccan-turkey-meatballs-citrus-couscous" target="_blank">
+            <img
+              src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-684452_11-ee266b8.jpg"
+              alt="Lunch7">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">Turkey Meatballs with Couscous</h4>Light and packed with protein, these
+            meatballs make for a
+            satisfying and super-healthy lunch. <br><br><br><br>View the full recipe <a style="color: blue;"
+              href="https://www.bbcgoodfood.com/recipes/moroccan-turkey-meatballs-citrus-couscous"
+              target="_blank">here</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lunch8 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://www.bbcgoodfood.com/recipes/spicy-cajun-chicken-quinoa" target="_blank">
+            <img
+              src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-589462_11-7e45ab1.jpg"
+              alt="Lunch8">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">Spicy Cajun Chicken Quinoa</h4>Protein-packed quinoa and deliciously seasoned
+            chicken makes this
+            midweek meal a superhealthy option. <br><br><br>View the full recipe <a style="color: blue;"
+              href="https://www.bbcgoodfood.com/recipes/spicy-cajun-chicken-quinoa" target="_blank">here</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-
-  <div class="responsive">
-    <div class="gallery">
-      <a href="https://www.myprotein.com/thezone/recipe/spicy-chicken-with-couscous-macro-balanced-meals/"
-        target="_blank">
-        <img
-          src="https://static.thcdn.com/images/v2/app/uploads/sites/478/2019/12/Spicy-Chicken-ARTICLE_1577793747.jpg?width=700"
-          alt="Lunch3">
-      </a>
-      <div class="desc">
-        <h4>Spicy Chicken With Couscous</h4><br>This spicy chicken recipe is bursting with flavor and is a simple way to
-        liven up plain old chicken and rice meal prep. <br><br><br>View the full recipe <a style="color: blue;"
-          href="https://www.myprotein.com/thezone/recipe/spicy-chicken-with-couscous-macro-balanced-meals/"
-          target="_blank">here</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="responsive">
-    <div class="gallery">
-      <a href="https://www.bbcgoodfood.com/recipes/spicy-fish-stew" target="_blank">
-        <img
-          src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/jamaican-fish-stew-440-400-9ba6282.jpg?quality=90&resize=440,400"
-          alt="Lunch4">
-      </a>
-      <div class="desc">
-        <h4>Spicy Fish Stew</h4><br>Full of omega-3 fats and providing four of your 5-a-day, this healthy dinner is
-        packed with flavorful ingredients including garlic, salmon fillets and herbs <br><br>View the full recipe <a
-          style="color: blue;" href="https://www.bbcgoodfood.com/recipes/spicy-fish-stew" target="_blank">here</a>
-      </div>
-    </div>
+  </span>
+  <!-- Show more 2 -->
+  <div class="btn-container">
+    <button id="lunchBtn" class="moreBtn">Read more</button>
   </div>
 
   <div class="clearfix"></div>
+
   <!--- Lunch Image Gallery End --->
 
-
-  <!-- Content 2-->
-
-  <div class="options-container-row">
-    <div class="options-container-col">
-      <br>
-      <h3 style="margin-left: 50px;">Browse more lunch options provided by the resources above!</h3>
-      <ul>
-        <li><a href="https://vshred.com/blog/lunch-ideas-easy-healthy/" target="_blank">VShred</a></li>
-        <li><a href="https://www.muscleandstrength.com/recipes/lunch" target="_blank">Muscle and Strength</a></li>
-        <li><a href="https://www.myprotein.com/thezone/recipe/meal-prep-recipes-muscle-building-fat-loss/"
-            target="_blank">MyProtein</a></li>
-        <li><a href="https://www.bbcgoodfood.com/recipes/collection/high-protein-lunch-recipes" target="_blank">BBC
-            GoodFood</a></li>
-
-      </ul>
-    </div>
-  </div>
-
-
   <!--- Dinner Image Gallery --->
+
   <hr>
-  <h1 id="Dinner" style="margin-top: 20px; margin-bottom: 20px; text-align: center;">Dinner</h1>
+  <h1 class="meal-h1" id="Dinner">Dinner</h1>
 
-  <p style="margin-left: 200px; margin-right: 200px; margin-bottom: 50px; text-align: center;">
+  <h3 class="meal-h3">
     To help your muscles recover and to replace their glycogen stores, eat a meal that contains both carbohydrates and
-    protein within two hours of your exercise session if possible. Consider a snack if your meal is more than two hours
+    protein within two hours of your exercise session if possible. Consider a snack if your meal is more than two
+    hours
     away.
-  </p>
+  </h3>
 
 
-  <div class="responsive">
-    <div class="gallery">
-      <a href="https://cafedelites.com/easy-salmon-piccata/" target="_blank">
-        <img
-          src="https://media.self.com/photos/5761b0055fa7179c0a05afab/master/w_320%2Cc_limit/cafe-delites-Salmon-Piccata.jpg"
-          alt="Dinner1">
-      </a>
-      <div class="desc">
-        <h4>Salmon Piccata</h4><br>You can never go wrong with a delicious salmon for dinner after a fulfilling workout.
-        <br><br><br>View the full recipe <a style="color: blue;" href="https://cafedelites.com/easy-salmon-piccata/"
-          target="_blank">here</a>
+  <!-- First Container for Dinner -->
+  <span id="baseD">
+    <div class="container-recipe">
+      <!-- Dinner1 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://www.justonecookbook.com/simple-chicken-curry/" target="_blank">
+            <img
+              src="https://media.self.com/photos/62a9bc78b67721523d001a56/master/w_2580%2Cc_limit/japanese-chicken-curry.png"
+              alt="Dinner1">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">Japanese Chicken Curry</h4>Delicious Japanese Chicken Curry recipe for a weeknight
+            dinner! Tender
+            pieces of chicken, carrots, and potatoes cooked in a rich, savory curry sauce. <br><br>View the full recipe
+            <a style="color: blue;" href="https://www.justonecookbook.com/simple-chicken-curry/"
+              target="_blank">here</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dinner2 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://www.farmersdaughterconsulting.com/blog/italian-inspired-beef-farro-bowls/" target="_blank">
+            <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2023/03/Italian-Inspired-Beef-Farro-Bowls.jpg"
+              alt="Dinner2">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">Italian-Inspired Beef & Farro Bowl</h4>These Italian-flavored whole grain and lean
+            beef bowls are
+            packed with vegetables and plenty of protein.<br><br><br><br>View the full recipe <a style="color: blue;"
+              href="https://www.farmersdaughterconsulting.com/blog/italian-inspired-beef-farro-bowls/"
+              target="_blank">here</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dinner3 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://cravingsomethinghealthy.com/creamy-braised-chicken-with-mushrooms-and-spinach/"
+            target="_blank">
+            <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2023/03/Chicken-with-Spinach-and-Mushrooms.jpg"
+              alt="Dinner3">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">Chicken With Spinach & Mushrooms</h4>This creamy chicken with spinach and mushrooms
+            recipe is packed
+            with protein from lean chicken and Greek yogurt. <br><br><br>View the full recipe <a style="color: blue;"
+              href="https://cravingsomethinghealthy.com/creamy-braised-chicken-with-mushrooms-and-spinach/"
+              target="_blank">here</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dinner4 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://tobyamidornutrition.com/recipes/lighter-shrimp-scampi-2/" target="_blank">
+            <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2023/03/Lighter-Shrimp-Scampi.jpg"
+              alt="Dinner4">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">Lighter Shrimp Scampi</h4>Shrimp is a very lean protein providing 18 grams of
+            protein per
+            3-cooked-ounce serving. It's also an excellent source of selenium and vitamin B12. <br><br>View the full
+            recipe <a style="color: blue;" href="https://tobyamidornutrition.com/recipes/lighter-shrimp-scampi-2/"
+              target="_blank">here</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </span>
+  <!-- Show more btn: Hides content #3 -->
+  <span id="moreD" class="moreInfo">
+    <!-- Second Container for Dinner -->
+    <div class="container-recipe">
+      <!-- Dinner5 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://cravingsomethinghealthy.com/one-pan-salmon-with-lemony-rice-yogurt-herb-sauce/"
+            target="_blank">
+            <img
+              src="https://cravingsomethinghealthy.com/wp-content/uploads/2022/04/one-pan-salmon-with-lemony-rice-and-yogurt-sauce.jpg"
+              alt="Dinner5">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">Salmon with Lemony Rice & Yogurt Herb Sauce</h4>This tasty, one-pan Salmon recipe is
+            full of
+            bright
+            lemon and herb flavors. It's perfect for a weeknight meal. <br><br><br>View the full recipe <a
+              style="color: blue;"
+              href="https://cravingsomethinghealthy.com/one-pan-salmon-with-lemony-rice-yogurt-herb-sauce/"
+              target="_blank">here</a>
+          </div>
+        </div>
+      </div>
 
-  <div class="responsive">
-    <div class="gallery">
-      <a href="https://www.farmersdaughterconsulting.com/blog/italian-inspired-beef-farro-bowls/" target="_blank">
-        <img
-          src="https://www.eatthis.com/wp-content/uploads/sites/4/2023/03/Italian-Inspired-Beef-Farro-Bowls.jpg?quality=82&strip=all&w=640"
-          alt="Dinner2">
-      </a>
-      <div class="desc">
-        <h4>Italian-Inspired Beef & Farro Bowl</h4><br>These Italian-flavored whole grain and lean beef bowls are packed
-        with vegetables and plenty of protein.<br><br><br>View the full recipe <a style="color: blue;"
-          href="https://www.farmersdaughterconsulting.com/blog/italian-inspired-beef-farro-bowls/"
-          target="_blank">here</a>
+      <!-- Dinner6 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://cravingsomethinghealthy.com/roasted-tomato-caprese-pasta-salad/" target="_blank">
+            <img src="https://cravingsomethinghealthy.com/wp-content/uploads/2016/09/28806307164_dd8f41cf0c.jpg"
+              alt="Dinner6">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">Roasted Tomato Caprese Pasta Salad</h4><br>Enjoy a taste of summer all year long with
+            this quick and
+            easy
+            Caprese pasta that's just as good whether it's served warm or cold.<br><br>View the full recipe <a
+              style="color: blue;" href="https://cravingsomethinghealthy.com/roasted-tomato-caprese-pasta-salad/"
+              target="_blank">here</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dinner7 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://cravingsomethinghealthy.com/grilled-pesto-tomato-flatbread-pizza/" target="_blank">
+            <img src="https://cravingsomethinghealthy.com/wp-content/uploads/2015/04/28583740698_73427b3694_c.jpg"
+              alt="Dinner7">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">Grilled Flatbread Pizza with Pesto Tomatoes & Fresh Mozzarella</h4>Grilled Pesto Tomato and Mozzarella Flatbread Pizza is restaurant-worthy pizza that's so fast and easy to whip up any night of the week.
+            <br><br>View the full recipe <a style="color: blue;"
+              href="https://cravingsomethinghealthy.com/grilled-pesto-tomato-flatbread-pizza/" target="_blank">here</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dinner8 -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="https://tobyamidornutrition.com/recipes/lemon-garlic-spaghetti-with-shrimp-and-spinach/"
+            target="_blank">
+            <img src="https://tobyamidornutrition.com/wp-content/uploads/2020/08/Shimp-and-Pasta.jpeg" alt="Dinner8">
+          </a>
+          <div class="desc">
+            <h4 class="meal-h4">Lemon-Garlic Spaghetti with Shrimp and Spinach</h4>This delicious combination of
+            shrimp and lemon
+            spaghetti is the perfect dinner to end your night with! <br><br><br>View the full recipe <a style="color: blue;"
+              href="https://tobyamidornutrition.com/recipes/lemon-garlic-spaghetti-with-shrimp-and-spinach/"
+              target="_blank">here</a>
+          </div>
+        </div>
       </div>
     </div>
+  </span>
+  <!-- SHow more 3-->
+  <div class="btn-container">
+    <button id="dinnerBtn" class="moreBtn">Read more</button>
   </div>
-
-  <div class="responsive">
-    <div class="gallery">
-      <a href="https://cravingsomethinghealthy.com/creamy-braised-chicken-with-mushrooms-and-spinach/" target="_blank">
-        <img
-          src="https://www.eatthis.com/wp-content/uploads/sites/4/2023/03/Chicken-with-Spinach-and-Mushrooms.jpg?quality=82&strip=all&w=640"
-          alt="Dinner3">
-      </a>
-      <div class="desc">
-        <h4>Chicken With Spinach & Mushrooms</h4><br>This creamy chicken with spinach and mushrooms recipe is packed
-        with protein from lean chicken and Greek yogurt. <br><br>View the full recipe <a style="color: blue;"
-          href="https://cravingsomethinghealthy.com/creamy-braised-chicken-with-mushrooms-and-spinach/"
-          target="_blank">here</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="responsive">
-    <div class="gallery">
-      <a href="https://tobyamidornutrition.com/recipes/lighter-shrimp-scampi-2/" target="_blank">
-        <img
-          src="https://www.eatthis.com/wp-content/uploads/sites/4/2023/03/Lighter-Shrimp-Scampi.jpg?quality=82&strip=all&w=640"
-          alt="Break4">
-      </a>
-      <div class="desc">
-        <h4>Lighter Shrimp Scampi</h4><br>Shrimp is a very lean protein providing 18 grams of protein per 3-cooked-ounce
-        serving. It's also an excellent source of selenium and vitamin B12. <br><br>View the full recipe <a
-          style="color: blue;" href="https://tobyamidornutrition.com/recipes/lighter-shrimp-scampi-2/"
-          target="_blank">here</a>
-      </div>
-    </div>
-  </div>
-
   <div class="clearfix"></div>
+
+
   <!--- Dinner Image Gallery End --->
 
-  <!-- Content 2-->
-
-  <div class="options-container-row">
-    <div class="options-container-col">
-      <br>
-      <h3 style="margin-left: 50px;">Browse more dinner options provided by the resources above!</h3>
-      <ul>
-        <li><a href="https://www.self.com/gallery/10-high-protein-dinners-you-can-make-in-20-minutes-or-less"
-            target="_blank">SELF</a></li>
-        <li><a href="https://www.farmersdaughterconsulting.com/recipes/" target="_blank">Farmers Daughter Consulting</a>
-        </li>
-        <li><a href="https://cravingsomethinghealthy.com/category/healthy-recipes/main-dish-recipes/"
-            target="_blank">Craving Something Healthy</a></li>
-        <li><a href="https://tobyamidornutrition.com/recipes/" target="_blank">Toby Amidor Nutrition</a></li </ul>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
 
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
 
+      const breakfastButton = document.getElementById("breakfastBtn");
+      const lunchButton = document.getElementById("lunchBtn");
+      const dinnerButton = document.getElementById("dinnerBtn");
+
+      const moreBreakfast = document.getElementById("moreB");
+      const moreLunch = document.getElementById("moreL");
+      const moreDinner = document.getElementById("moreD");
+
+      const baseBreakfast = document.getElementById("baseB");
+      const baseLunch = document.getElementById("baseL");
+      const baseDinner = document.getElementById("baseD");
+
+      moreBreakfast.style.display = "none";
+      moreLunch.style.display = "none";
+      moreDinner.style.display = "none";
+
+      breakfastButton.addEventListener("click", function () {
+        //console.log("Breakfast Button Pushed");
+        showMore(breakfastButton, moreBreakfast, baseBreakfast);
+      });
+      lunchButton.addEventListener("click", function () {
+        //console.log("Lunch Button Pushed");
+        showMore(lunchButton, moreLunch, baseLunch);
+      });
+      dinnerButton.addEventListener("click", function () {
+        //console.log("Dinner Button Pushed");
+        showMore(dinnerButton, moreDinner, baseDinner);
+      });
+
+      function showMore(button, moreBox, baseBox) {
+        if (moreBox.style.display === "none") {
+          button.innerHTML = "Read less";
+          moreBox.style.display = "inline";
+          moreBox.scrollIntoView({behavior: 'smooth'});
+        } else {
+          button.innerHTML = "Read more";
+          moreBox.style.display = "none";
+          baseBox.scrollIntoView({behavior: 'smooth'});
+        }
+      }
+    });
+  </script>
 
 
 
@@ -439,25 +729,86 @@
   -->
   <!--  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-left"></script>
   -->
-  <!-- Footer -->
-  <footer>
-    <div class="footer-top">
-      <h3>IN PROGRESS . . .</h3>
-      <p>Random Text</p>
-      <ul class="social-icons">
-        <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="https://twitter.com/X?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i
-              class="fa fa-twitter"></i></a></li>
-        <li><a href="https://www.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-        <li><a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a></li>
-        <li><a href="https://www.linkedin.com/feed/" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+  <!-- main footer -->
+  <footer class="gx ua ark asy aus chh ddh dfk">
+    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0">
+          <a href="https://olympia.haothai2.repl.co/index.html" class="flex items-center">
+            <img src="img/home/darkBackground.svg" class="h-8 me-3" alt="Olympia Logo" />
 
-      </ul>
-    </div>
-    <div class="footer-bottom">
-      <p>copyright &copy;2023 Olympia. designed by <span>Team 4: Hao, Nick, & Cesar</span></p>
+
+          </a>
+        </div>
+        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 mx-auto">
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-400 tracking-wider uppercase">Resources</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="resources.html" class="text-base text-gray-300 hover:text-white">Learn More</a>
+              </li>
+              <li>
+                <a href="about.html" class="text-base text-gray-300 hover:text-white">About Us</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-400 tracking-wider uppercase">Follow us</h2>
+            <ul class="text-white font-medium">
+              <li class="mb-4">
+                <a href="about.html" class="text-base text-gray-300 hover:text-white">Github</a>
+              </li>
+              <li>
+                <a href="about.html" class="text-base text-gray-300 hover:text-white">Linkedln</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="#" class="text-base text-gray-300 hover:text-white">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-300 hover:text-white">Terms &amp; Conditions</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a
+            href="https://olympia.haothai2.repl.co/index.html" class="hover:underline">Olympia™</a>. All Rights
+          Reserved.
+        </span>
+        <div class="flex mt-4 sm:justify-center sm:mt-0">
+
+          <a href="about.html" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5 fa fa-google-plus">
+            <span class="sr-only">Google page</span>
+          </a>
+
+          <a href="about.html"
+            class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5 fa-brands fa-discord">
+            <span class="sr-only">Discord page</span>
+          </a>
+
+          <a href="about.html" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5 fa-brands fa-github">
+
+            <span class=" sr-only">GitHub account</span>
+          </a>
+          <a href="about.html"
+            class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5 fa fa-linkedin-square">
+
+            <span class="sr-only">Linkedln account</span>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
+  <script src="https://kit.fontawesome.com/d02ec1b504.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </body>
 
 </html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    html {
+      scroll-behavior: smooth
+    }
+  </style>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Olympia</title>
+  <link rel="icon" href="/img/home/group24.svg">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&family=Montserrat:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <!-- Creates a navigation bar for the page and linking each html page together -->
+  <header>
+    <nav
+      class="flex items-center justify-between h-24 bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 nav-links">
+      <div class="flex justify-between w-full flex-wrap items-center justify-between mx-auto p-4">
+        <div class="flex items-center justify-center mx-auto">
+          <a href="https://olympia.haothai2.repl.co/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img class="logo" src="img/home/group25.svg" alt="Company" width="200" height="50">
+          </a>
+          <button data-collapse-toggle="navbar-sticky" type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600 ml-auto"
+            aria-controls="navbar-sticky" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          </button>
+          <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ml-auto">
+
+
+
+
+            <div class="hidden w-full md:flex md:w-auto" id="navbar-sticky">
+              <!-- Update the background color class from bg-gray-50 to bg-white -->
+              <ul
+                class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-white md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 dark:border-gray-700">
+                <li>
+                  <a href="index.html"
+                    class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                    aria-current="page">Home</a>
+                </li>
+                <li class="relative group">
+                  <a href="meal.html"
+                    class="md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                    Meals
+                  </a>
+                  <!-- Dropdown menu -->
+                  <div
+                    class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg absolute top-full left-0 mt-0">
+                    <ul class="py-2 text-sm ">
+                      <li>
+                        <a href="supplements.html" class="block px-4 py-2">Supplements</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="relative group">
+                  <a href="exercises.html"
+                    class="md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                    Exercises
+                  </a>
+                  <!-- Dropdown menu -->
+                  <div
+                    class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg absolute top-full left-0 mt-0">
+                    <ul class="py-2 text-sm">
+                      <li>
+                        <a href="tips.html" class="block px-4 py-2">Inspiration</a>
+                      </li>
+                      <li>
+                        <a href="workouttips.html" class="block px-4 py-2">Workout Tips</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="resources.html"
+                    class="group-hover-bg-gray-100 md:hover-bg-transparent md:hover-text-blue-700 md:p-0 md:bg-white dark:text-white dark:hover-bg-gray-700 dark:hover-text-white md:dark:hover-bg-transparent dark:border-gray-700">
+                    Resources
+                  </a>
+                </li>
+                <li>
+                  <a href="about.html"
+                    class="group-hover-bg-gray-100 md:hover-bg-transparent md:hover-text-blue-700 md:p-0 md:bg-white dark:text-white dark:hover-bg-gray-700 dark:hover-text-white md:dark:hover-bg-transparent dark:border-gray-700">
+                    About Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </nav>
+  </header>
+
+  <div class="workouttips-background-row">
+    <div class="workouttips-background-col">
+      <!-- Main page section-->
+      <h2>Workout Tips</h2>
+
+      <p>
+        Some handy tips to help you in your fitness journey!
+      </p>
+    </div>
+  </div>
+  <div align="center" style="padding:10px">
+    <h1> Click below to scroll through some helpful tips! </h1>
+  </div>
+  <!-- image: https://www.freepik.com/free-photo/young-man-sportswear-exercise-class-gym_4833325.htm#query=workout&position=6&from_view=search&track=sph -->
+  <!-- Content 2-->
+  <div id="tipContainer" class="tipContainer" align="center">
+    <div id="imgContainer" class="imgContainer">
+      <button id="lefty" class="arrow-left"> </button>
+      <button id="righty" class="arrow-right"> </button>
+    </div>
+  </div>
+
+  <!--   <div align="center" style="padding:10px">
+    <button id="lefty" class = "arrow-left">  </button>
+    <button id="righty" class="arrow-right"> </button>
+  </div> -->
+
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <!--  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-left"></script>
+  -->
+  <!-- main footer -->
+  <footer class="gx ua ark asy aus chh ddh dfk">
+    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0">
+          <a href="https://olympia.haothai2.repl.co/index.html" class="flex items-center">
+            <img src="img/home/darkBackground.svg" class="h-8 me-3" alt="Olympia Logo" />
+
+
+          </a>
+        </div>
+        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 mx-auto">
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-400 tracking-wider uppercase">Resources</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="resources.html" class="text-base text-gray-300 hover:text-white">Learn More</a>
+              </li>
+              <li>
+                <a href="about.html" class="text-base text-gray-300 hover:text-white">About Us</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-400 tracking-wider uppercase">Follow us</h2>
+            <ul class="text-white font-medium">
+              <li class="mb-4">
+                <a href="about.html" class="text-base text-gray-300 hover:text-white">Github</a>
+              </li>
+              <li>
+                <a href="about.html" class="text-base text-gray-300 hover:text-white">Linkedln</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="#" class="text-base text-gray-300 hover:text-white">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-300 hover:text-white">Terms &amp; Conditions</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a
+            href="https://olympia.haothai2.repl.co/index.html" class="hover:underline">Olympia™</a>. All Rights
+          Reserved.
+        </span>
+        <div class="flex mt-4 sm:justify-center sm:mt-0">
+
+          <a href="about.html" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5 fa fa-google-plus">
+            <span class="sr-only">Google page</span>
+          </a>
+
+          <a href="about.html"
+            class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5 fa-brands fa-discord">
+            <span class="sr-only">Discord page</span>
+          </a>
+
+          <a href="about.html" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5 fa-brands fa-github">
+
+            <span class=" sr-only">GitHub account</span>
+          </a>
+          <a href="about.html"
+            class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5 fa fa-linkedin-square">
+
+            <span class="sr-only">Linkedln account</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tipArray = [
+        ["Setting Clear Goals", "Before you lace up those sneakers and dive headfirst into the world of fitness, it's crucial to set clear goals. Think of your goals as the guiding star on your fitness map. Whether it's weight loss, muscle gain, improved endurance, or simply getting fitter, having a clear destination makes your journey all the more purposeful.", "Tip1"],
+        ["Creating a Workout Plan", "Just as a journey without a map can lead to aimless wandering, a workout plan is your roadmap to fitness success. It helps you navigate the gym or your chosen workout environment with direction, purpose, and structure.", "Tip2"],
+        ["Warming Up", "Before you dive into your workout, it's important to warm up. A warm-up is like the gentle nudge that tells your muscles, 'Hey, we're about to get active.' It gradually elevates your heart rate, increases blood flow to your muscles, and prepares your body for the impending physical demands.", "Tip3"],
+        ["Staying Hydrated", "Staying properly hydrated is the equivalent of fueling up your car before a long journey. It ensures your body functions optimally, especially during a workout when you're likely to lose fluids through sweat. Think of water as the lifeblood that keeps your engine running smoothly.", "Tip4"],
+        ["Maintaining Proper Form", "Proper form during exercise is the cornerstone of a safe and effective workout. It's like the nuts and bolts that hold a machine together, preventing it from falling apart. Correct form not only minimizes the risk of injury but also maximizes the benefits of your efforts.", "Tip5"],
+        ["Incorporating Strength Training", "Strength training is like constructing a fortress for your body. Each repetition and set is a brick that fortifies your muscles. Over time, this fortress becomes a symbol of your resilience and determination in the realm of fitness.", "Tip6"],
+        ["Mixing Cardio and Strength", "Cardiovascular exercises and strength training may seem like a mismatched couple, but together, they create a harmonious balance in your fitness routine. It's the yin and yang of workouts, ensuring you cover both endurance and strength.", "Tip7"],
+        ["Varying Your Workouts", "Variety is the spice of life, and the same goes for your workouts. Mixing things up is like exploring different cuisines to satisfy your palate. It prevents boredom, challenges your body, and keeps you engaged in your fitness journey.", "Tip8"],
+        ["Listening to Your Body", "Pay attention to your body's signals during exercise. Your body communicates through sensations, and it's crucial to respect these messages. Discomfort or pain is your body's way of saying, 'Let's pause and reconsider.'", "Tip9"],
+        ["Rest and Recovery", "Just as your phone needs to be charged, your body requires rest and recovery. Think of rest days as the moments when your body plugs into the charger, rejuvenating itself for future workouts.", "Tip10"],
+        ["Stretching After Workouts", "Post-workout stretching is like a deep breath after a long day. It's your moment to release tension and restore muscle elasticity. Stretching can help reduce soreness and improve flexibility.", "Tip11"],
+        ["Using Proper Footwear", "Wearing the right shoes during exercise is akin to putting on armor before battle. It's about safeguarding your feet and joints from the harsh impact of exercise. The proper footwear provides stability and support.", "Tip12"],
+        ["Staying Consistent", "Consistency in your workouts is like the steady rhythm of a drum. It provides structure and discipline, allowing you to progress steadily toward your fitness goals. Just as a drummer maintains a consistent beat, your dedication to regular exercise fosters a sense of routine and habit. This habit becomes the cornerstone of your fitness journey, guiding you through the fluctuations and challenges of everyday life.", "Tip13"],
+        ["Monitoring Progress", "Keeping a workout journal is like documenting your journey in a personal chronicle. It's a record of your accomplishments, challenges, and milestones, helping you track your progress over time. Similar to how a historian meticulously records the events of a civilization, your workout journal serves as a historian of your fitness endeavors. It not only highlights your achievements but also identifies patterns and areas for improvement, enabling you to fine-tune your fitness strategy.", "Tip14"],
+        ["Staying Motivated", "Motivation is the engine that keeps you going. It's like the wind beneath your fitness wings, propelling you forward even when the skies seem gray. Like a beacon guiding a ship through stormy seas, motivation acts as a compass steering you towards your fitness goals. It's the unwavering force that helps you weather the storms of self-doubt and plateaus, reminding you of the reasons you embarked on this fitness journey in the first place.", "Tip15"]
+        ,
+        ["Gradually Increasing Intensity", "Increasing the intensity of your workouts is like turning up the heat on a stove. You do it slowly, allowing your body to adapt and conquer new challenges at a manageable pace.", "Tip16"],
+        ["Nutritional Balance", "Your diet is the fuel that powers your fitness journey. It's not just about calories but about providing your body with the right nutrients to perform at its best. Maintaining a balanced diet is essential for achieving your fitness goals.", "Tip17"],
+        ["Cross-Training", "Cross-training is like exploring a diverse menu of exercises. It helps prevent overuse injuries, keeps your workouts interesting, and challenges different muscle groups. Incorporating various workouts ensures a holistic approach to fitness and prevents the plateau effect.", "Tip18"],
+        ["Staying Safe", "If you're new to exercise or have any health concerns, taking safety precautions is like putting on a seatbelt before a journey. It's a wise choice to ensure you stay on the path to health and well-being. Safety measures are vital to prevent injuries and maintain a sustainable workout routine.", "Tip19"],
+        ["Having Fun", "Fitness should be enjoyable, not a chore. It's like finding the joy in a hobby you love. Whether it's dancing, hiking, or playing sports, choose activities that bring a smile to your face and make your fitness journey a delightful one. Enjoyment in exercise is key to sustaining a long-term commitment to fitness.", "Tip20"]
+      ];
+
+      /* IMAGE CREDITS
+      Image 1: https://www.freepik.com/free-photo/soccer-into-goal-success-concept_3398410.htm#query=soccer%20goal&position=3&from_view=search&track=ais
+      Image 2: https://pixabay.com/photos/apple-calendar-desk-ipad-tablet-1867752/
+      Image 3: https://pixabay.com/photos/girl-stretching-warming-up-run-7832382/
+      Image 4: https://www.freepik.com/free-photo/elder-woman-struggling-with-high-temperature_28259463.htm#query=drink%20water&position=8&from_view=search&track=ais
+      Image 5: https://pixabay.com/photos/archery-bow-and-arrow-objectives-782503/
+      Image 6: https://www.freepik.com/free-photo/close-up-man-doing-crossfit-workout_17805494.htm#query=weight%20lifting&position=24&from_view=search&track=ais
+      Image 7: https://www.freepik.com/free-photo/fitness-girl-running-treadmill_6522032.htm#query=cardio&position=0&from_view=search&track=sph
+      Image 8: https://pixabay.com/photos/calendar-dates-schedule-days-1990453/
+      Image 9: https://www.freepik.com/free-photo/sportsman-having-knee-injury-problem_11135182.htm#query=pain%20workout&position=22&from_view=search&track=ais
+      Image 10: https://www.freepik.com/free-photo/woman-tired-after-running-bali_18909875.htm#query=pain%20workout&position=16&from_view=search&track=ais
+      Image 11: https://www.freepik.com/free-photo/portrait-smiling-afro-american-sports-man-stretching-his-muscular-arms-before-workout-by-sea-using-music-app-his-smartphone_9696875.htm#query=stretching&position=5&from_view=search&track=sph
+      Image 12: https://pixabay.com/photos/sport-shoes-running-shoes-shoes-1470061/
+      Image 13: https://www.freepik.com/free-photo/planner-calendar-schedule-date-concept_17129538.htm#query=schedule&position=10&from_view=search&track=sph
+      Image 14: https://pixabay.com/photos/stairs-building-businessmen-6133971/
+      Image 15: https://pixabay.com/photos/man-runner-running-fitness-canal-4800810/
+      Image 16: https://pixabay.com/photos/man-person-power-strength-strong-1282232/
+      Image 17: https://pixabay.com/photos/food-vegetable-healthy-meal-onion-3270461/
+      Image 18: https://pixabay.com/photos/runners-cross-country-race-2365067/
+      Image 19: https://pixabay.com/photos/running-sport-race-athlete-hall-4782721/
+      Image 20: https://pixabay.com/photos/sandboarding-sand-board-sand-dune-67663/
+      */
+
+      var tipIndex = 0;
+      const leftButton = document.getElementById("lefty");
+      const rightButton = document.getElementById("righty");
+      tipContainer = document.getElementById("tipContainer");
+      imgContainer = document.getElementById("imgContainer");
+      displayTip(tipIndex);
+
+      leftButton.addEventListener("click", function () {
+        tipIndex--;
+        if (tipIndex < 0) {
+          tipIndex = 19;
+        }
+        cycleTips(tipIndex);
+      });
+
+      rightButton.addEventListener("click", function () {
+        tipIndex++;
+        if (tipIndex > 19) {
+          tipIndex = 0;
+        }
+        cycleTips(tipIndex);
+      });
+
+      function cycleTips(tipPos) {
+        removeTip(tipPos);
+        displayTip(tipPos);
+      }
+
+
+
+      function displayTip(tipPos) {
+
+        var totalContainer = document.createElement("div");
+        totalContainer.className = "tipRow";
+        totalContainer.style.padding = "1px";
+
+        var tipImg = document.createElement("img");
+        tipImg.src = "tips-img/" + tipArray[tipPos][2] + ".jpg";
+        tipImg.alt = "Tip " + (tipPos + 1) + " Image";
+        tipImg.className = "tipImage";
+
+        var newTitle = document.createElement("h2");
+        newTitle.innerText = tipArray[tipPos][0];
+        newTitle.className = "tipTitle";
+
+        var newTip = document.createElement("p");
+        newTip.innerText = tipArray[tipPos][1];
+        newTip.className = "tipText";
+
+        imgContainer.appendChild(tipImg);
+        totalContainer.appendChild(newTitle);
+        totalContainer.appendChild(newTip);
+        tipContainer.appendChild(totalContainer);
+      }
+      function removeTip(tipPos) {
+        tipContainer.removeChild(tipContainer.lastChild);
+        imgContainer.removeChild(imgContainer.lastChild);
+      }
+
+    });
+  </script>
+  <script src="https://kit.fontawesome.com/d02ec1b504.js" crossorigin="anonymous"></script>
+
+  <script src="index.js"></script>
+  <!--  <script src="https://cdn.tailwindcss.com"></script> -->
+</body>
+
+</html>

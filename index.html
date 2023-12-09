@@ -5,12 +5,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Olympia</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="/img/home/group24.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&family=Montserrat:wght@500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
 
 </head>
 
@@ -19,159 +22,370 @@
 
   <!-- Creates a navigation bar for the page and linking each html page together -->
   <header>
-    <!-- Creates tittle -->
-    <a href="https://olympia.haothai2.repl.co/index.html">
-      <img class="logo" src="img/Group25.svg" alt="Company " width="200" height=50">
-    </a>
-    <nav class="nav-links">
-      <!--  class="nav-links" -->
-      <li><a href="index.html">Home</a></li>
-      <!--<li><a href=process.html>Process</a></li>
-    -->
-      <!-- <li><a href=goal.html>Goals</a></li> -->
-      <!-- <li><a href=routine.html>Routine</a></li> -->
-      <li>
-        <a href="meal.html">Meal Plan</a>
-        <ul class="dropdown-menu">
-          <li><a href="supplements.html">Supplements</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="exercises.html">Exercises</a>
-        <ul class="dropdown-menu">
-          <li><a href="tips.html">Inspiration</a></li>
+    <nav
+      class="flex items-center justify-between h-24 bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 nav-links">
+      <div class="flex items-center justify-center mx-auto">
+        <a href="https://olympia.haothai2.repl.co/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img class="logo" src="img/home/group25.svg" alt="Company" width="200" height="50">
+        </a>
+        <button data-collapse-toggle="navbar-sticky" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600 ml-auto"
+          aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ml-auto">
 
-        </ul>
-      </li>
-      <li><a href="resources.html">Resources</a></li>
-
-      <li><a href="about.html">About Us</a></li>
-
-
-
-      <!-- <li><a href=tester.html> Tester Page </a></li> -->
+          <div class="hidden w-full md:flex md:w-auto" id="navbar-sticky">
+            <ul
+              class="flex flex-col p-4 mt-96 font-medium border border-gray-100 rounded-lg bg-white md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-white dark:border-gray-700">
+              <li>
+                <a href="index.html"
+                  class="block py-2 px-3 text-gray-700 md:bg-transparent md:text-blue-700 md:p-0 dark:text-gray-400"
+                  aria-current="page" aria-current="page">Home</a>
+              </li>
+              <li class="relative group">
+                <a href="meal.html"
+                  class="md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 md:dark:hover:bg-transparent">
+                  Meals
+                </a>
+                <!-- Dropdown menu -->
+                <div
+                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg absolute top-full left-0 mt-0">
+                  <ul class="py-2 text-sm ">
+                    <li>
+                      <a href="supplements.html" class="block px-4 py-2">Supplements</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="relative group">
+                <a href="exercises.html"
+                  class="md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 md:dark:hover:bg-transparent">
+                  Exercises
+                </a>
+                <!-- Dropdown menu -->
+                <div
+                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg absolute top-full left-0 mt-0">
+                  <ul class="py-2 text-sm">
+                    <li>
+                      <a href="tips.html" class="block px-4 py-2">Inspiration</a>
+                    </li>
+                    <li>
+                      <a href="workouttips.html" class="block px-4 py-2">Workout Tips</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="resources.html"
+                  class="group-hover-bg-gray-100 md:hover-bg-transparent md:hover-text-blue-700 md:p-0 md:bg-white dark:text-white dark:hover-bg-gray-700 dark:hover-text-white md:dark:hover-bg-transparent dark:border-gray-700">
+                  Resources
+                </a>
+              </li>
+              <li>
+                <a href="about.html"
+                  class="group-hover-bg-gray-100 md:hover-bg-transparent md:hover-text-blue-700 md:p-0 md:bg-white dark:text-white dark:hover-bg-gray-700 dark:hover-text-white md:dark:hover-bg-transparent dark:border-gray-700">
+                  About Us
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </nav>
-    <!-- Register and Sign-in button; Placed outside to group elements separately from navigation links -->
 
-    <div class="menu-button-container">
-      <a href="#"><button class="menu-button">Sign up</button></a>
-      <a href="#"><button class="menu-button">Sign in</button></a>
-    </div>
+
   </header>
 
+  <!-- Main page section-->
+  <section class="bg-center bg-no-repeat bg-[url('/img/home/france.jpg')] bg-gray-500 bg-blend-multiply pt-24">
+    <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+      <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Reach Your
+        Highest Potential</h1>
+      <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Find the best version of yourself,
+        achieve your workout goal, and the lifestyle you want.</p>
+      <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+        <a href="#content1"
+          class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-black hover:bg-gray-900 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-900">
+          Get started
+          <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 14 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9" />
+          </svg>
+        </a>
+        <a href="resources.html"
+          class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+          Learn more
+        </a>
+      </div>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
-  <div class="main-background-row">
-    <div class="main-background-col">
-      <!-- Main page section-->
-      <h2>Reach Your Highest Potential</h2>
-      <p>
-        Find the best version of yourself, achieve your workout goal, and the lifestyle you want.
-      </p>
 
-      <button><a href="#content1">Get Started</a></button>
+  <!-- Content 2-->
+
+  <div class="container mx-auto px-6 py-12" id="content1">
+    <div class="relative z-10 border-2 border-gray-300 bg-white p-6 rounded-xl shadow-xl">
+      <div class="text-center">
+        <h1 class="text-5xl font-extrabold text-gray-900 mb-6">
+          View meal ideas <span class="text-indigo-600">to improve your Diet</span>
+        </h1>
+        <p class="text-lg text-gray-700 mb-8">Find meals that suit your workout
+          goals, whether you are looking to gain muscle, increase endurance, or lose weight.</p>
+        <div class="flex justify-center gap-8 mb-12">
+          <a href="meal.html"
+            class="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition-all hover:scale-105">
+            Meals
+          </a>
+          <a href="resources.html"
+            class="inline-block bg-white text-gray-700 font-bold py-3 px-6 rounded-full border-2 border-gray-300 shadow-sm hover:shadow-md transition-all">
+            LEARN MORE
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-center gap-6">
+        <div class="w-full sm:w-1/2 lg:w-1/3 px-4">
+          <img src="/img/home/breakfast2.jpg" alt="Meal Plan"
+            class="w-full h-auto rounded-lg shadow-xl transition-all hover:shadow-2xl">
+          <!-- https://pixabay.com/photos/breakfast-orange-juice-loaf-1804436/ -->
+        </div>
+        <div class="w-full sm:w-1/2 lg:w-1/3 px-4">
+          <img src="/img/home/breakfast1.jpg" alt="Meal Plan"
+            class="w-full h-auto rounded-lg shadow-xl transition-all hover:shadow-2xl">
+          <!-- https://pixabay.com/photos/breakfast-healthy-hummus-spread-1804457/ -->
+        </div>
+        <div class="w-full sm:w-1/2 lg:w-1/3 px-4">
+          <img src="/img/home/bowl.jpg" alt="Meal Plan"
+            class="w-full h-auto rounded-lg shadow-xl transition-all hover:shadow-2xl">
+          <!-- https://pixabay.com/photos/bowl-breakfast-fruits-healthy-food-1844894/ -->
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Content 2-->
-  <div class="main-s2-container-row" id="content1">
-    <div class="frame">
-      <div class="main-s2-container-col">
-        <h2>Create a Meal Plan <br> that suits your needs</h2>
-        <p>
-          Find the meal that suits your workout goal, whether you are looking to gain muslce, increase endurance, or
-          lose
-          weight. <br>Customize your meals exclusively.
-        </p>
-        <button><a href="meal.html">CREATE MEAL</a></button>
-        <button><a href="resources.html">LEARN MORE</a></button>
-        <div class="img-row">
+  <!-- Content 3-->
+  <div class="container mx-auto py-8 px-6">
+    <div
+      class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-500">
+      <div class="flex flex-col md:flex-row">
+        <div class="md:w-1/2 p-10 text-white flex flex-col justify-center">
+          <h1 class="text-5xl font-extrabold mb-6">Elevate Your Workout Routine</h1>
+          <p class="mb-8">Target a specific muscle group of your choice</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="exercises.html"
+              class="inline-block bg-opacity-80 bg-white text-gray-900 font-bold py-3 px-6 rounded-full hover:bg-opacity-100 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+              List of Workouts
+            </a>
+          </div>
+        </div>
+        <div class="md:w-1/2 p-10">
+          <div class="grid grid-cols-2 gap-6">
+            <!-- Image placeholders -->
+          </div>
+          <div class="col-span-8">
+            <img src="/img/home/bowl.jpg" alt="Colorful Meal"
+              class="rounded-xl transform transition duration-300 hover:scale-105">
+            <!-- 
+            https://pixabay.com/photos/boxer-woman-sport-fighter-fitness-1984344/
+            -->
+          </div>
 
-          <img src="/img/breakfast2.jpg" alt="Grapefruit slice atop a pile of other slices" width="450" height="350">
-          <!-- https://pixabay.com/photos/breakfast-orange-juice-loaf-1804436/ -->
-          <img src="/img/breakfast1.jpg" alt="Grapefruit slice atop a pile of other slices" width="450" height="350">
-          <!-- https://pixabay.com/photos/breakfast-healthy-hummus-spread-1804457/ -->
-          <img src=" /img/bowl.jpg" alt="Grapefruit slice atop a pile of other slices" width="450" height="350">
-          <!-- https://pixabay.com/photos/bowl-breakfast-fruits-healthy-food-1844894/ -->
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- Content 4-->
+  <div class="container mx-auto py-8 px-6">
+    <div
+      class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-500">
+      <div class="flex flex-col md:flex-row">
+        <div class="md:w-1/2 p-10">
+          <div class="grid grid-cols-2 gap-6">
+            <!-- Image placeholders -->
+          </div>
+          <div class="col-span-8">
+            <img src="img/home/sup.jpg" alt="workout"
+              class="rounded-xl transform transition duration-300 hover:scale-105">
+            <!-- 
+            https://pixabay.com/photos/boxer-woman-sport-fighter-fitness-1984344/
+            -->
+          </div>
+
+        </div>
+        <div class="md:w-1/2 p-10 text-white flex flex-col justify-center">
+          <h1 class="text-5xl font-extrabold mb-6">Get the most out of your Workout</h1>
+          <p class="mb-8">Maximize your potential and get the most from your workout <br>by giving your body all the
+            nutrients it needs</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="supplements.html"
+              class="inline-block bg-opacity-80 bg-white text-gray-900 font-bold py-3 px-6 rounded-full hover:bg-opacity-100 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+              FIND SUPPLEMENTS
+            </a>
+
+          </div>
         </div>
 
       </div>
     </div>
   </div>
-  <!-- Content 3-->
-  <div class="main-s3-container-row">
-    <div class="main-s3-container-col">
-      <h2>Exercises</h2>
-      <p>
-        Target a specific muscle group of your choice
-      </p>
-      <button><a href="exercises.html" >LIST OF WORKOUTS</a></button>
-      <!-- <img src="img/exercise1.jpg" alt="Company" width="450" height="350">
-      <img src="img/exercise2.jpg" alt="abc" width="450" height="350"> -->
 
-    </div>
-  </div>
+  <!-- Content 5-->
+  <div class="container mx-auto py-8 px-6">
+    <div
+      class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-500">
+      <div class="flex flex-col md:flex-row">
+        <div class="md:w-1/2 p-10">
+          <div class="grid grid-cols-2 gap-6">
+            <!-- Image placeholders -->
+          </div>
+          <div class="col-span-8">
+            <img src="/img/home/man_run.jpg" alt="manrunning"
+              class="rounded-xl transform transition duration-300 hover:scale-105">
+            <!-- 
+            https://pixabay.com/photos/man-runner-running-sport-fitness-8293794/
+            -->
+          </div>
 
-  <!-- Content 4-->
-  <div class="left-image">
-    <img src="img/sup.jpg" alt="workout">
-    <div class="main-s4-container-row">
-      <div class="main-s4-container-col">
-        <h2>Supplements</h2>
-        <p>
-          Maximize your potential and get the most from your workout
-        </p>
+        </div>
+        <div class="md:w-1/2 p-10 text-white flex flex-col justify-center">
+          <h1 class="text-5xl font-extrabold mb-6">Learn More About Working Out</h1>
+          <p class="mb-8">Learn how to improve your workout experience by <br>watching videos and articles</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="resources.html"
+              class="inline-block bg-opacity-80 bg-white text-gray-900 font-bold py-3 px-6 rounded-full hover:bg-opacity-100 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+              MORE INFORMATION
+            </a>
+          </div>
+        </div>
 
-        <button><a href="supplements.html">FIND SUPPLEMENTS</a></button>
       </div>
     </div>
   </div>
 
-  <!-- Content 5-->
-  <div class="main-s5-container-row">
-    <div class="main-s5-container-col">
-      <h2>Resources</h2>
-      <p>
-        Learn how to improve your workout experience
-      </p>
-
-      <button><a href="resources.html">MORE INFORMATION</a></button>
-    </div>
-  </div>
-
   <!-- Content 6-->
-  <div class="main-s6-container-row">
-    <div class="main-s6-container-col">
-      <h2>About the Project</h2>
-      <p>
-        Learn more about our team and what we do
-      </p>
+  <div class="container mx-auto py-8 px-6">
+    <div
+      class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-500">
+      <div class="flex flex-col md:flex-row">
+        <div class="md:w-1/2 p-10">
+          <div class="grid grid-cols-2 gap-6">
+            <!-- Image placeholders -->
+          </div>
+          <div class="col-span-8">
+            <img src="https://haveuheard.com/wp-content/uploads/a-plus-huh.jpg" alt="manrunning"
+              class="rounded-xl transform transition duration-300 hover:scale-105">
+            <!-- 
+            https://pixabay.com/photos/man-runner-running-sport-fitness-8293794/
+            -->
+          </div>
+        </div>
+        <div class="md:w-1/2 p-10 text-white flex flex-col justify-center">
+          <h1 class="text-5xl font-extrabold mb-6">About the Project</h1>
+          <p class="mb-8">Learn more about our team and what we do</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="about.html"
+              class="inline-block bg-opacity-80 bg-white text-gray-900 font-bold py-3 px-6 rounded-full hover:bg-opacity-100 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+              ABOUT US
+            </a>
+          </div>
+        </div>
 
-      <button><a href="about.html">ABOUT US</a></button>
+      </div>
     </div>
   </div>
 
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-top">
-      <h3>IN PROGRESS . . .</h3>
-      <p>Random Text</p>
-      <ul class="social-icons">
-        <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="https://twitter.com/X?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i
-              class="fa fa-twitter"></i></a></li>
-        <li><a href="https://www.google.com/"><i class="fa fa-google-plus"></i></a></li>
-        <li><a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a></li>
-        <li><a href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin-square"></i></a></li>
+  <!-- main footer -->
+  <footer class="gx ua ark asy aus chh ddh dfk">
+    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0">
+          <a href="https://olympia.haothai2.repl.co/index.html" class="flex items-center">
+            <img src="img/home/darkBackground.svg" class="h-8 me-3" alt="Olympia Logo" />
 
-      </ul>
-    </div>
-    <div class="footer-bottom">
-      <p>copyright &copy;2023 Olympia. designed by <span>Team 4: Hao, Nick, & Cesar</span></p>
+
+          </a>
+        </div>
+        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 mx-auto">
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-400 tracking-wider uppercase">Resources</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="resources.html" class="text-base text-gray-300 hover:text-white">Learn More</a>
+              </li>
+              <li>
+                <a href="about.html" class="text-base text-gray-300 hover:text-white">About Us</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-400 tracking-wider uppercase">Follow us</h2>
+            <ul class="text-white font-medium">
+              <li class="mb-4">
+                <a href="about.html" class="text-base text-gray-300 hover:text-white">Github</a>
+              </li>
+              <li>
+                <a href="about.html" class="text-base text-gray-300 hover:text-white">Linkedln</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="#" class="text-base text-gray-300 hover:text-white">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-300 hover:text-white">Terms &amp; Conditions</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a
+            href="https://olympia.haothai2.repl.co/index.html" class="hover:underline">Olympia™</a>. All Rights
+          Reserved.
+        </span>
+        <div class="flex mt-4 sm:justify-center sm:mt-0">
+
+          <a href="about.html" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5 fa fa-google-plus">
+            <span class="sr-only">Google page</span>
+          </a>
+
+          <a href="about.html"
+            class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5 fa-brands fa-discord">
+            <span class="sr-only">Discord page</span>
+          </a>
+
+          <a href="about.html" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5 fa-brands fa-github">
+
+            <span class=" sr-only">GitHub account</span>
+          </a>
+          <a href="about.html"
+            class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5 fa fa-linkedin-square">
+
+            <span class="sr-only">Linkedln account</span>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
+
+
+
+
+
+
+
+
 
 
 
@@ -184,6 +398,11 @@
   -->
   <!--  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-left"></script>
   -->
+  <!-- font awsome icons -->
+  <script src="https://kit.fontawesome.com/d02ec1b504.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </body>
 
 </html>

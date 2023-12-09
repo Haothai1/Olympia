@@ -22,18 +22,19 @@
       color: blue;
       text-decoration: underline;
     }
-  
   </style>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Olympia</title>
+  <link rel="icon" href="/img/home/group24.svg">
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&family=Montserrat:wght@500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 
@@ -42,84 +43,291 @@
 <body>
   <!-- Creates a navigation bar for the page and linking each html page together -->
   <header>
-    <!-- Creates tittle -->
-    <a href="https://olympia.haothai2.repl.co/index.html">
-      <img class="logo" src="img/Group25.svg" alt="Company " width="200" height=50">
-    </a>
-    <nav class="nav-links">
-      <!--  class="nav-links" -->
-      <li><a href="index.html">Home</a></li>
-      <!--<li><a href=process.html>Process</a></li>
-    -->
-      <!-- <li><a href=goal.html>Goals</a></li> -->
-      <!-- <li><a href=routine.html>Routine</a></li> -->
-      <li>
-        <a href="meal.html">Meal Plan</a>
-        <ul class="dropdown-menu">
-          <li><a href="supplements.html">Supplements</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="exercises.html">Exercises</a>
-        <ul class="dropdown-menu">
-          <li><a href="tips.html">Inspiration</a></li>
-
-        </ul>
-      </li>
-      <li><a href="resources.html">Resources</a></li>
-
-      <li><a href="about.html">About Us</a></li>
+    <nav
+      class="flex items-center justify-between h-24 bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 nav-links">
+      <div class="flex justify-between w-full flex-wrap items-center justify-between mx-auto p-4">
+        <div class="flex items-center justify-center mx-auto">
+          <a href="https://olympia.haothai2.repl.co/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img class="logo" src="img/home/group25.svg" alt="Company" width="200" height="50">
+          </a>
+          <button data-collapse-toggle="navbar-sticky" type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600 ml-auto"
+            aria-controls="navbar-sticky" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          </button>
+          <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ml-auto">
 
 
 
-      <!-- <li><a href=tester.html> Tester Page </a></li> -->
+
+            <div class="hidden w-full md:flex md:w-auto" id="navbar-sticky">
+              <!-- Update the background color class from bg-gray-50 to bg-white -->
+              <ul
+                class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-white md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 dark:border-gray-700">
+                <li>
+                  <a href="index.html"
+                    class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                    aria-current="page">Home</a>
+                </li>
+                <li class="relative group">
+                  <a href="meal.html"
+                    class="md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                    Meals
+                  </a>
+                  <!-- Dropdown menu -->
+                  <div
+                    class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg absolute top-full left-0 mt-0">
+                    <ul class="py-2 text-sm ">
+                      <li>
+                        <a href="supplements.html" class="block px-4 py-2">Supplements</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="relative group">
+                  <a href="exercises.html"
+                    class="md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                    Exercises
+                  </a>
+                  <!-- Dropdown menu -->
+                  <div
+                    class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg absolute top-full left-0 mt-0">
+                    <ul class="py-2 text-sm">
+                      <li>
+                        <a href="tips.html" class="block px-4 py-2">Inspiration</a>
+                      </li>
+                      <li>
+                        <a href="workouttips.html" class="block px-4 py-2">Workout Tips</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="resources.html"
+                    class="group-hover-bg-gray-100 md:hover-bg-transparent md:hover-text-blue-700 md:p-0 md:bg-white dark:text-white dark:hover-bg-gray-700 dark:hover-text-white md:dark:hover-bg-transparent dark:border-gray-700">
+                    Resources
+                  </a>
+                </li>
+                <li>
+                  <a href="about.html"
+                    class="group-hover-bg-gray-100 md:hover-bg-transparent md:hover-text-blue-700 md:p-0 md:bg-white dark:text-white dark:hover-bg-gray-700 dark:hover-text-white md:dark:hover-bg-transparent dark:border-gray-700">
+                    About Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
     </nav>
-    <!-- Register and Sign-in button; Placed outside to group elements separately from navigation links -->
-
-    <div class="menu-button-container">
-      <a href="#"><button class="menu-button">Sign up</button></a>
-      <a href="#"><button class="menu-button">Sign in</button></a>
-    </div>
   </header>
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~GLOBAL HEADER~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-  <div class="tip-title">
+  <div class="tip-title pt-24 mt-12">
     <h3> Find inspiration and tips to success </h3>
     <p>Click 'Generate' to get started</p>
     <button class="tip-button" id="tip-buttonX">Generate</button>
   </div>
-
-  <div id="rand-container">
+  <div id="rand-container" class="h-[80vh]">
     <div id="image-wrapper">
       <img id="rand-gen" src="">
       <div id="quote-container"></div>
     </div>
   </div>
-  
-  
+
+
 
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~GLOBAL FOOTER~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-  <footer>
-    <div class="footer-top">
-      <h3>IN PROGRESS . . .</h3>
-      <p>Random Text</p>
-      <ul class="social-icons">
-        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+  <footer class="gx ua ark asy aus chh ddh dfk">
+    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0">
+          <a href="https://olympia.haothai2.repl.co/index.html" class="flex items-center">
+            <img src="img/home/darkBackground.svg" class="h-8 me-3" alt="Olympia Logo" />
 
-      </ul>
-    </div>
-    <div class="footer-bottom">
-      <p>copyright &copy;2023 Olympia. designed by <span>Team 4: Hao, Nick, & Cesar</span></p>
+
+          </a>
+        </div>
+        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 mx-auto">
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-400 tracking-wider uppercase">Resources</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="resources.html" class="text-base text-gray-300 hover:text-white">Learn More</a>
+              </li>
+              <li>
+                <a href="about.html" class="text-base text-gray-300 hover:text-white">About Us</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-400 tracking-wider uppercase">Follow us</h2>
+            <ul class="text-white font-medium">
+              <li class="mb-4">
+                <a href="about.html" class="text-base text-gray-300 hover:text-white">Github</a>
+              </li>
+              <li>
+                <a href="about.html" class="text-base text-gray-300 hover:text-white">Linkedln</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="#" class="text-base text-gray-300 hover:text-white">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-300 hover:text-white">Terms &amp; Conditions</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a
+            href="https://olympia.haothai2.repl.co/index.html" class="hover:underline">Olympia™</a>. All Rights
+          Reserved.
+        </span>
+        <div class="flex mt-4 sm:justify-center sm:mt-0">
+
+          <a href="about.html" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5 fa fa-google-plus">
+            <span class="sr-only">Google page</span>
+          </a>
+
+          <a href="about.html"
+            class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5 fa-brands fa-discord">
+            <span class="sr-only">Discord page</span>
+          </a>
+
+          <a href="about.html" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5 fa-brands fa-github">
+
+            <span class=" sr-only">GitHub account</span>
+          </a>
+          <a href="about.html"
+            class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5 fa fa-linkedin-square">
+
+            <span class="sr-only">Linkedln account</span>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const showImageButton = document.getElementById("tip-buttonX");
+      const imageContainer = document.getElementById("rand-container");
+      const randomImageElement = document.getElementById("rand-gen");
 
+      const imageFilenames = [
+        "1.jpg", //https://pixabay.com/photos/woman-jogging-running-exercise-2592247/
+        "2.jpg", //https://pixabay.com/photos/man-person-power-strength-strong-1282232/
+        "3.jpg", //https://pixabay.com/photos/woman-yoga-coast-exercise-fitness-1834827/
+        "4.jpg", //https://pixabay.com/photos/silhouette-bike-fitness-woman-683751/
+        "5.jpg", //https://pixabay.com/photos/walking-fitness-girl-dawn-fall-1868652/
+        "6.jpg", //https://pixabay.com/photos/roller-skates-rollerblades-381216/
+        "7.jpg", //https://pixabay.com/photos/boxer-woman-sport-fighter-fitness-1984344/
+        "8.jpg", //https://pixabay.com/photos/surfing-surfer-wave-ocean-sea-926822/
+        "9.jpg", //https://pixabay.com/photos/fitness-dumbbells-training-gym-594143/
+        "10.jpg", //https://pixabay.com/photos/tartan-track-athletics-2678544/
+        "11.jpg", //https://pixabay.com/photos/yoga-yoga-pose-asana-sunset-woman-5281457/
+        "12.jpg", //https://pixabay.com/photos/yoga-outdoors-sunrise-meditation-6723315/
+        "13.jpg", //https://pixabay.com/photos/handstand-man-beach-sea-ocean-2224104/
+        "14.jpg", //https://pixabay.com/photos/golf-golfed-sunset-sports-golfer-787826/
+        "15.jpg", //https://pixabay.com/photos/to-go-biking-poppy-leisure-time-5178398/
+        "16.jpg", //https://pixabay.com/photos/running-woman-race-athlete-sport-4782722/
+        "17.jpg", //https://pixabay.com/photos/sportsman-bicycle-sports-cycling-5055367/
+        "18.jpg", //https://pixabay.com/photos/running-woman-track-exercise-7056590/
+        "19.jpg", //https://pixabay.com/photos/cyclist-cycling-biking-bike-riding-5507225/
+        "20.jpg", //https://pixabay.com/photos/skateboard-shoes-active-in-the-free-5326930/
+        "21.jpg", //https://pixabay.com/photos/man-bicycle-fitness-activity-7036709/
+        "22.jpg", //https://pixabay.com/photos/archer-archery-sunset-arrow-bow-2345211/
+        "23.jpg", //https://pixabay.com/photos/swimmers-swimming-pool-olympic-pool-79592/
+        "24.jpg",  //https://pixabay.com/photos/achieve-woman-girl-jumping-running-1822503/
+        "25.jpg", //https://pixabay.com/photos/young-woman-girl-athletic-nature-2699780/
+        "26.jpg", //https://pixabay.com/photos/jogging-fitness-exercise-training-1509003/
+        "27.jpg", //https://pixabay.com/photos/woman-yoga-meditation-fitness-2587069/
+        "28.jpg", //https://pixabay.com/photos/yoga-pose-exercise-woman-female-3426151/
+        "29.jpg", //https://pixabay.com/photos/fitness-sunset-sport-dusk-open-air-3448864/
+        "30.jpg", //https://pixabay.com/photos/yoga-backbend-blue-sky-fitness-241613/
+        "31.jpg", //https://pixabay.com/photos/winning-motivation-succeed-man-1529402/
+        "32.jpg", //https://pixabay.com/photos/run-runner-athlete-fitness-1749410/
+        "33.jpg", //https://pixabay.com/photos/rock-climbing-fitness-sports-cliff-924842/
+        "34.jpg", //https://pixabay.com/photos/climb-mountaineering-mountains-2125148/
+        "35.jpg", //https://pixabay.com/photos/climb-alpine-climbing-climber-1669121/
+        "36.jpg", //https://pixabay.com/photos/mountain-hiking-girl-woman-298999/
+        "37.jpg", //https://pixabay.com/photos/hiking-mountain-hike-climber-3394576/
+        "38.jpg", //https://pixabay.com/photos/landscape-mountains-sky-clouds-man-78058/
+        "39.jpg", //https://pixabay.com/photos/jogging-fitness-jogger-movement-4211946/
+        "40.jpg", //https://pixabay.com/photos/yoga-balance-zen-beach-ocean-1842292/
+
+
+        /* "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg",
+        "6.jpg",
+        "7.jpg",
+        "8.jpg",
+        "9.jpg",
+        "0.jpg", */
+      ];
+
+      // Function to display a random image
+      function displayRandomImage() {
+        const randomIndex = Math.floor(Math.random() * imageFilenames.length);
+        const randomImageSrc = "rand-img/" + imageFilenames[randomIndex];
+        randomImageElement.src = randomImageSrc;
+        randomImageElement.alt = "Random Image";
+      }
+
+      // Event listener for the button click
+      showImageButton.addEventListener("click", displayRandomImage);
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const tipsButton = document.getElementById("tip-buttonX");
+      const quoteContainer = document.getElementById("quote-container");
+
+      // Function to display a random quote
+      function displayRandomQuote() {
+        fetch("quotes.txt") // Load the text file containing quotes
+          .then(response => response.text())
+          .then(text => {
+            const quoteList = text.split("\n").filter(quoteLine => quoteLine.trim() !== "");
+
+            // Parse and extract the quotes
+            const quotes = quoteList.map(quoteLine => {
+              const [quote] = quoteLine.split("~"); // Extract only the quote part
+              return quote.trim(); // Remove leading/trailing spaces
+            });
+
+            // Select a random quote
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const randomQuote = quotes[randomIndex];
+
+            // Display the selected quote
+            quoteContainer.textContent = randomQuote;
+          })
+          .catch(error => {
+            console.error("Error loading quotes:", error);
+          });
+      }
+
+      // Event listener for the button click
+      tipsButton.addEventListener("click", displayRandomQuote);
+    });
+  </script>
+  <script src="https://kit.fontawesome.com/d02ec1b504.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </body>
 
 </html>

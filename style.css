@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   outline: none;
+  scroll-behavior: smooth
 }
 
 body {
@@ -99,15 +100,25 @@ button {
 }
 
 /* Navigation Bar Start */
+
+/* CSS to expand the dropdown menu on hover */
+.absolute {
+  margin-top: -50px;
+  /* Adjust this value as needed */
+}
+
+.relative:hover .absolute,
+.relative:hover .group-hover {
+  display: block;
+}
+
+
 header {
   display: flex;
   justify-content: space-around;
   align-items: center;
   /* padding: 18px 10%; */
   padding: 0 249px;
-  /* 20% on both sides */
-  /* background-color: #24252A; */
-  background-color: #f8f9fa;
   list-style: none;
   white-space: nowrap;
 }
@@ -135,11 +146,9 @@ header {
 
 }
 
-
-
 .nav-links li {
-  display: inline-block;
-  padding: 0px 20px;
+  display: block;
+  padding: 0 12px;
   list-style: none;
 }
 
@@ -150,7 +159,7 @@ header {
 .nav-links li a {
   text-decoration: none;
   color: #42424a;
-  padding: 22px 0;
+  padding: 12px 0;
   display: inline-block;
   transition: all ease 0.3s;
   font-size: 18px;
@@ -158,37 +167,8 @@ header {
 
 .nav-links li a:hover {
   color: #e63946;
+
 }
-
-.nav-links .dropdown-menu {
-  position: absolute;
-  width: 200px;
-  background-color: #ffffff;
-  box-shadow: 0 20px 45px #00000020;
-  margin-top: -50px;
-  opacity: 0;
-  z-index: -999;
-  transition: all ease 0.5s;
-}
-
-.nav-links li:hover .dropdown-menu {
-  z-index: 3;
-  opacity: 1;
-  margin-top: 0;
-}
-
-.nav-links .dropdown-menu li {
-  margin: 0;
-  width: 100%;
-}
-
-.nav-links .dropdown-menu li a {
-  padding: 15px 20px;
-  display: inline-block;
-  width: 100%;
-}
-
-
 
 .menu-button-container {
   display: flex;
@@ -234,35 +214,13 @@ header {
   border: 2px solid black;
 }
 
-
-/* .dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+/* Target the anchor tags within the ul that's within the dropdown div */
+div.z-10 ul li a {
   display: block;
-} */
+  width: auto;
+  padding: 10px 8px;
+}
+
 /* Navigation Bar End */
 
 
@@ -276,467 +234,45 @@ Image by <a href="https://pixabay.com/users/12019-12019/?utm_source=link-attribu
 
 
 /* ---section 1 Main page Start---*/
-.main-background-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url("/img/france.jpg");
+.bg-center.bg-no-repeat.bg-[url('/img/france.jpg')].bg-gray-500.bg-blend-multiply {
   background-size: cover;
-  height: 655px;
-  position: relative;
-  overflow: hidden;
-
-}
-
-.main-background-col h2 {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-between;
-  color: white;
-  padding: 30px 30px 0px 30px;
-  font-size: 48px;
-  max-width: 70%;
-}
-
-.main-background-col p,
-.main-background-col button {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-between;
-  color: white;
-  padding: 30px 30px 50px 30px;
-  font-size: 18px;
-  max-width: 70%;
-}
-
-.main-background-col button {
-  margin-left: 20px;
-  padding: 9px 25px;
-  background-color: black;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-  color: white;
-  border: 2px solid black;
-}
-
-.main-background-col button a {
-  color: white;
-}
-
-.main-background-col button:hover {
-  background: rgba(48, 48, 48, 1);
-  border: 2px solid rgba(48, 48, 48, 1);
-}
-
-/* ---section 1 Main page End--- */
-
-/* ---section 2  Main page Start--- */
-.main-s2-container-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 150px 50px;
-}
-
-.frame {
-  padding: 45px;
-  clip-path: polygon(0 0, 90% 0, 100% 20%, 100% 80%, 100% 100%, 10% 100%, 0 80%, 0% 20%);
-  border: 10px solid black;
-}
-
-.main-s2-container-row col {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  font-weight: 500;
-}
-
-.main-s2-container-col p,
-.main-s2-container-col img,
-.main-s2-container-col h2,
-.main-s2-container-col a {
-
-  color: black;
-  padding: 30px 30px 50px 30px;
-  font-size: 16px;
-}
-
-.main-s2-container-col button {
-
-  background-color: white;
-  padding: 12.5px 10px;
-  border: 2px solid black;
-  border-radius: 3px;
-  margin-right: 14.5px;
-}
-
-.main-s2-container-col h2 {
-  padding: 30px 30px 0px 30px;
-  font-size: 48px;
-
-  line-height: 1.3;
-}
-
-.main-s2-container-col p {
-  font-weight: 700;
-  line-height: 1.8em;
-}
-
-.main-s2-container-col a {
-  transition: all 0.3s ease 0s;
-  color: black;
-}
-
-.main-s2-container-col a:hover {
-  text-decoration: underline;
+  max-height: 655px;
 }
 
 
-.img-row {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  max-width: auto;
-  height: auto;
-  position: relative;
-  margin: auto 0;
-  padding-top: 20px;
-
-}
-
-.img-row img {
-  padding: 30px 15px;
-  border-radius: 40px;
-}
-
-/* ----section 2  Main page End--- */
-
-/* ---section 3  Main page Start--- */
-.main-s3-container-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 150px 50px;
-  background-color: #0081A7;
-
-}
-
-.main-s3-container-row {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  font-weight: 500;
-}
-
-.main-s3-container-col p,
-.main-s3-container-col img,
-.main-s3-container-col h2 {
-  color: black;
-  padding: 30px 30px 50px 30px;
-  font-size: 16px;
-}
-
-
-.main-s3-container-col h2 {
-  padding: 30px 30px 0px 30px;
-  font-size: 48px;
-
-  line-height: 1.3;
-}
-
-.main-s3-container-col p {
-  font-weight: 700;
-  line-height: 1.8em;
-}
-
-.main-s3-container-col button {
-  margin-left: 20px;
-  padding: 9px 25px;
-  background-color: black;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-  border: 2px solid black;
-}
-
-.main-s3-container-col a {
-  transition: all 0.3s ease 0s;
-  color: white;
-}
-
-/* .img-row {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  max-width: auto;
-  height: auto;
-  position: relative;
-  margin: auto 0;
-  padding-top: 20px;
-
-}
-
-.img-row img {
-  padding: 30px 15px;
-  border-radius: 40px;
-} */
-
-/* ----section 3  Main page End--- */
-
-/* ---section 4  Main page Start--- */
-
-.left-image {
-  display: flex;
-  align-items: center;
-  max-width: 100%;
-}
-
-.left-image img {
-  margin-right: 150px;
-  max-width: 80%;
-  height: 90vh;
-  object-fit: cover;
-  object-position: center;
-}
-
-.main-s4-container-row {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 150px 50px;
-  background-color: white;
-
-}
-
-
-
-.main-s4-container-row col {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  font-weight: 500;
-
-
-}
-
-.main-s4-container-col p,
-.main-s4-container-col img,
-.main-s4-container-col h2 {
-
-  color: black;
-  padding: 30px 30px 50px 30px;
-  font-size: 16px;
-}
-
-.main-s4-container-col h2 {
-  padding: 30px 30px 0px 30px;
-  font-size: 48px;
-
-  line-height: 1.3;
-}
-
-.main-s4-container-col p {
-  font-weight: 700;
-  line-height: 1.8em;
-}
-
-.main-s4-container-col button {
-  margin-left: 20px;
-  padding: 9px 25px;
-  background-color: black;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-  color: white;
-  border: 2px solid black;
-}
-
-.main-s4-container-col a {
-  transition: all 0.3s ease 0s;
-  color: white;
-}
-
-
-
-/* .img-row {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  max-width: auto;
-  height: auto;
-  position: relative;
-  margin: auto 0;
-  padding-top: 20px;
-
-}
-
-.img-row img {
-  padding: 30px 15px;
-  border-radius: 40px;
-} */
-
-/* ----section 4  Main page End--- */
-
-/* ---section 5  Main page Start--- */
-.main-s5-container-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 150px 50px;
-  background-color: #FDFCDC;
-}
-
-.main-s5-container-row col {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  font-weight: 500;
-}
-
-.main-s5-container-col p,
-.main-s5-container-col img,
-.main-s5-container-col h2 {
-
-  color: black;
-  padding: 30px 30px 50px 30px;
-  font-size: 16px;
-}
-
-.main-s5-container-col h2 {
-  padding: 30px 30px 0px 30px;
-  font-size: 48px;
-  line-height: 1.3;
-}
-
-.main-s5-container-col p {
-  font-weight: 700;
-  line-height: 1.8em;
-}
-
-.main-s5-container-col button {
-  margin-left: 20px;
-  padding: 9px 25px;
-  background-color: black;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-  color: white;
-  border: 2px solid black;
-}
-
-.main-s5-container-col a {
-  transition: all 0.3s ease 0s;
-  color: white;
-}
-
-
-
-
-/* .img-row {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  max-width: auto;
-  height: auto;
-  position: relative;
-  margin: auto 0;
-  padding-top: 20px;
-
-}
-
-.img-row img {
-  padding: 30px 15px;
-  border-radius: 40px;
-} */
-
-/* ----section 5  Main page End--- */
-
-/* ---section 6  Main page Start--- */
-.main-s6-container-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 150px 50px;
-  background-color: #FED9B7;
-
-}
-
-.main-s6-container-row col {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  font-weight: 500;
-}
-
-.main-s6-container-col p,
-.main-s6-container-col img,
-.main-s6-container-col h2 {
-
-  color: black;
-  padding: 30px 30px 50px 30px;
-  font-size: 16px;
-}
-
-.main-s6-container-col h2 {
-  padding: 30px 30px 0px 30px;
-  font-size: 48px;
-  line-height: 1.3;
-}
-
-.main-s6-container-col p {
-  font-weight: 700;
-  line-height: 1.8em;
-}
-
-.main-s6-container-col button {
-  margin-left: 20px;
-  padding: 9px 25px;
-  background-color: black;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-  color: white;
-  border: 2px solid black;
-}
-
-.main-s6-container-col a {
-  transition: all 0.3s ease 0s;
-  color: white;
-}
-
-
-
-
-/* .img-row {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  max-width: auto;
-  height: auto;
-  position: relative;
-  margin: auto 0;
-  padding-top: 20px;
-
-}
-
-.img-row img {
-  padding: 30px 15px;
-  border-radius: 40px;
-} */
-
-/* ----section 6  Main page End--- */
 
 /* -----------------index.html end------------------- */
 
 /* ---Exercise Page Start--- */
+.exercise-h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.exercise-h2 {
+
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.exercise-p {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(80, 59, 29, 0.5);
+  transform: translate(10%, -200%)
+}
 
 .exercise-background-row {
   display: flex;
@@ -744,7 +280,7 @@ Image by <a href="https://pixabay.com/users/12019-12019/?utm_source=link-attribu
   justify-content: center;
   background-image: url("/img/pushup.jpg");
   background-size: cover;
-  height: 5%;
+  padding: 230px;
   position: relative;
   overflow: hidden;
 }
@@ -760,9 +296,10 @@ Image by <a href="https://pixabay.com/users/12019-12019/?utm_source=link-attribu
   height: 100%;
   justify-content: space-between;
   color: white;
-  padding: 300px 300px 0px 300px;
+  /* padding: 300px 300px 0px 300px; */
   font-size: 48px;
-  max-width: 70%;
+  max-width: 45%;
+  font-weight: bold;
 }
 
 /* ---title card shadow Start---*/
@@ -816,6 +353,7 @@ exercise-background-col p,
 }
 
 .text-exer {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -864,11 +402,11 @@ exercise-background-col p,
   /* Empty content to create the pseudo-element */
   position: absolute;
   top: 0;
-  right: -14px;
+  right: -16px;
   /* Adjust this value to control the size of the chevron */
-  border-top: 19px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-left: 15px solid black;
+  border-top: 22px solid transparent;
+  border-bottom: 23px solid transparent;
+  border-left: 16px solid black;
   /* Adjust the size and color as needed */
 }
 
@@ -882,16 +420,95 @@ exercise-background-col p,
 /* --- title card shadow End ---*/
 
 /* ---Supplements Page Start--- */
+.supplements-bg-white {
+  background-color: white;
+}
+
+.supplements-h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+
+}
+
+.supplements-h2,
+.supplements-p {
+  width: 100%;
+  /* Full width of the container */
+  text-align: center;
+  /* Center text horizontally */
+  margin: 0 auto;
+  /* Auto margins for horizontal centering */
+  display: block;
+  /* Ensures the element is a block-level element */
+}
+
+.supplements-h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  margin-top: 80px;
+
+}
+
+.supplements-h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  line-height: 25px;
+}
+
+.supplements-p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
 
 .supplements-background-row {
   display: flex;
-  align-items: lef;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
   background-image: url("https://www.muscleandfitness.com/wp-content/uploads/2018/04/Muscular-Lean-And-Fit-Man-Resting-and-Drinking-Supplement-Drink-After-A-Workout.jpg?quality=86&strip=all");
   background-size: cover;
-  height: 655px;
+  height: 750px;
   position: relative;
   overflow: hidden;
+}
+
+.supplements-background-row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .5);
+  /* Fully opaque black */
+  z-index: 2;
+}
+
+/* Ensure content on the div is above the overlay */
+.supplements-background-row * {
+  position: relative;
+  z-index: 3;
 }
 
 .supplements-background-col h2 {
@@ -902,7 +519,7 @@ exercise-background-col p,
   color: white;
   padding: 30px 30px 0px 30px;
   font-size: 48px;
-  max-width: 70%;
+  max-width: 100%;
 }
 
 .supplements-background-col p {
@@ -924,16 +541,318 @@ exercise-background-col p,
   width: 50%;
 }
 
+/* --- supplements-container --- */
+#fh5co-portfolio {
+  margin-bottom: 7em;
+  background: #fafafa;
+  float: left;
+  width: 100%;
+  padding: 2em 4em
+}
+
+#fh5co-portfolio p {
+  background-color: #fff;
+  line-height: 25px;
+}
+
+#fh5co-portfolio h3 {
+
+  background-color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+  #fh5co-portfolio {
+    padding-left: 0;
+    padding-right: 0
+  }
+}
+
+#fh5co-portfolio .fh5co-portfolio-item {
+  float: left;
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-description,
+#fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-figure1,
+#fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-figure2,
+#fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-figure3,
+#fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-figure4 {
+  width: 50%
+}
+
+#fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-figure1 {
+  background-repeat: no-repeat;
+  background-size: 125%;
+  background-position: center center;
+  overflow: hidden
+}
+
+#fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-figure2 {
+  background-repeat: no-repeat;
+  background-size: 110%;
+  background-position: center center;
+  overflow: hidden;
+}
+
+#fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-figure3 {
+  background-repeat: no-repeat;
+  background-size: 130%;
+  background-position: center center;
+  overflow: hidden
+}
+
+#fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-figure4 {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  overflow: hidden
+}
+
+#fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-description {
+  background: #fff;
+  padding: 4em;
+  line-height: 25px
+}
+
+@media screen and (max-width: 1200px) {
+  #fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-description {
+    padding: 2em
+  }
+}
+
+#fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-description h2 {
+  font-family: "Roboto Slab", arial, sans-serif;
+  font-size: 30px;
+  line-height: 34px;
+  font-weight: 300;
+}
+
+#fh5co-portfolio .fh5co-portfolio-item.fh5co-img-right .fh5co-portfolio-figure {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0
+}
+
+@media screen and (max-width: 768px) {
+  #fh5co-portfolio {
+    margin-bottom: 4em
+  }
+
+  #fh5co-portfolio .fh5co-portfolio-item {
+    display: block
+  }
+
+  #fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-description,
+  #fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-figure {
+    display: block;
+    width: 100%
+  }
+
+  #fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-figure {
+    height: 400px
+  }
+
+  #fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-description {
+    padding: 1em
+  }
+
+  #fh5co-portfolio .fh5co-portfolio-item.fh5co-img-right .fh5co-portfolio-figure {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    height: 400px
+  }
+}
+
+.clearfix {
+  clear: both;
+}
+
+/* --- End Supplements-Container --- */
+
+
+
+/* ---title card shadow Start---*/
+#supp {
+  text-shadow: 2px 2px 4px rgba(80, 59, 29, 0.5);
+}
+
+supp-background-col p,
+.supp-background-col button {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  padding: 30px 30px 50px 30px;
+  font-size: 18px;
+  max-width: 70%;
+}
+
+.supp-background-col button {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: black;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: white;
+  border: 2px solid black;
+}
+
+.supp-background-col button:hover {
+  background: rgba(48, 48, 48, 1);
+  border: 2px solid rgba(48, 48, 48, 1);
+}
+
+.image-supp {
+  text-align: center;
+  position: relative;
+  width: 350px;
+  /* Set the width to match your image's width */
+  height: 300px;
+  /* Set the height to match your image's height */
+}
+
+.image-centering {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.text-supp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(90%);
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.0);
+  /* Semi-transparent background for text */
+  color: black;
+  text-align: center;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 20px;
+  opacity: 0;
+  /* Initially, text is hidden */
+  transition: opacity 0.3s ease;
+  /* Add a smooth transition effect */
+}
+
+.image-supp:hover img {
+  opacity: 0.7;
+  /* Change the image opacity on hover */
+}
+
+.image-supp:hover .text-supp {
+  opacity: 1;
+  /* Display the text on hover */
+}
+
+.inline {
+  display: inline-block;
+}
+
+#supp li {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  /* Adjust the padding to control the box size */
+  margin-top: 1px;
+  margin-bottom: 1px;
+  width: 270px;
+  position: relative;
+}
+
+#supp li::after {
+  content: '';
+  /* Empty content to create the pseudo-element */
+  position: absolute;
+  top: 0;
+  right: -14px;
+  /* Adjust this value to control the size of the chevron */
+  border-top: 19px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 15px solid black;
+  /* Adjust the size and color as needed */
+}
+
+#supp li a {
+  color: inherit;
+  /* Inherit the color from the parent */
+  text-decoration: none;
+  /* Remove underlines */
+}
+
+/* --- title card shadow End ---*/
+
 /* ---Supplements Page End--- */
 
-/* ---Meal Page Start--- */
+/* ---Meal.html Page Start--- */
+.meal-h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.meal-h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center
+}
+
+.meal-h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  margin-left: 350px;
+  margin-right: 350px;
+  text-align: center;
+}
+
+.meal-h4 {
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
 .meal-background-row {
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: url("https://fitnessvolt.com/wp-content/uploads/2022/06/3000-Calorie-Meal-Plan.jpg");
   background-size: cover;
-  height: 655px;
+  height: 750px;
   position: relative;
   overflow: hidden;
 }
@@ -966,6 +885,30 @@ exercise-background-col p,
   max-width: 70%;
 }
 
+/* Show more btn */
+.moreInfo {
+  display: none;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  margin: 20px;
+  padding: 20px;
+}
+
+.moreBtn {
+
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
 /* ------- Meal Images ------- */
 div.gallery {
   border: 1px solid #ccc;
@@ -980,13 +923,18 @@ div.gallery img {
   height: 300px;
 }
 
-div.desc {
-  padding: 15px;
+.desc {
+  padding: 3% 7%;
+  height: 100%;
   text-align: center;
+  overflow-y: hidden;
+  /* prevents text vertical overflow for cards */
 }
 
-* {
-  box-sizing: border-box;
+.container-recipe {
+  display: flex;
+  flex-direction: row;
+  padding: 40px 15px 0px 15px;
 }
 
 .responsive {
@@ -1145,13 +1093,10 @@ meal-background-col p,
 
 /* links for other websites */
 .options-container-row {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  background-size: cover;
   position: relative;
   overflow: hidden;
-  padding-bottom: 60px;
+  max-width: 100%;
+  width: 100%;
 }
 
 .options-container-col ul {
@@ -1167,7 +1112,6 @@ meal-background-col p,
   padding: 30px 0px 10px 0px;
   font-size: 48px;
 
-  margin-left: 50px;
 }
 
 .options-container-col p,
@@ -1182,7 +1126,6 @@ meal-background-col p,
 }
 
 .options-container-col a {
-  margin-left: 50px;
   padding: 12px 25px;
   background-color: black;
   cursor: pointer;
@@ -1243,7 +1186,7 @@ meal-background-col p,
   justify-content: center;
   align-items: center;
   background-color: #0c0354;
-  padding-bottom: 50px;
+  padding-bottom: 150px;
   position: relative;
   text-align: center;
   /* height: 700px; */
@@ -1287,5 +1230,126 @@ meal-background-col p,
 
 }
 
-
 /* Tips.html Page End */
+
+/* Workouttips.html Page Start */
+
+.workouttips-background-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/img/tips_header.jpg");
+  background-size: cover;
+  height: 655px;
+  position: relative;
+  overflow: hidden;
+}
+
+.workouttips-background-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.workouttips-background-col h2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  padding: 30px 30px 0px 30px;
+  font-size: 48px;
+  max-width: 100%;
+}
+
+.workouttips-background-col p {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  padding: 30px 30px 50px 30px;
+  font-size: 18px;
+  max-width: 100%;
+}
+
+.tipContainer {
+  position: relative;
+  display: inline-block;
+}
+
+
+.tipImage {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  height: 600px;
+  overflow: hidden;
+}
+
+.tipImage img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.imgContainer {
+  position: relative;
+}
+
+.arrow-right,
+.arrow-left {
+  position: absolute;
+  width: 100px;
+  /* Adjust width as needed */
+  height: 100px;
+  /* Adjust height as needed */
+  background-image: url('img/arrow.png');
+  /* Set the path to your image */
+  background-size: cover;
+  /* Adjust how the image covers the button */
+  background-position: center;
+  /* Center the image within the button */
+  background-color: transparent;
+  border: none;
+  /* Remove default button border */
+  cursor: pointer;
+  /* Show cursor as pointer on hover */
+}
+
+.arrow-right {
+  /* right: 385px; */
+  top: 50%;
+  transform: translateY(-50%) translateX(280%);
+}
+
+.arrow-left {
+  top: 50%;
+  transform: scaleX(-1) translateY(-50%) translateX(380%);
+}
+
+.arrow-right:hover {
+  background-image: url('img/light-arrow.png');
+}
+
+.arrow-left:hover {
+  background-image: url('img/light-arrow.png');
+}
+
+.tipText {
+  max-width: 55%;
+  font-size: 20px;
+}
+
+.tipTitle {
+  padding: 6px;
+  font-size: 28px;
+}
+
+/* Workouttips.html Page End */
