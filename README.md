@@ -1,17 +1,24 @@
-This website is designed to be an easy resource for those looking into working out. The different pages and their functions are described below:
+# Olympia - Fitness and Wellness Website
 
-index.html-  the hub, to show the different pages with links to each one
+## Introduction
+Olympia is a comprehensive fitness and wellness website designed to help users achieve their fitness goals. It offers resources on meal planning, workout routines, and nutritional supplements, tailored to various fitness objectives.
 
-meal.html-   a page providing descriptions and links to simple and healthy recipes for all means
+## Features
+- **Meal Plans**: Custom meal ideas to support different workout goals.
+- **Workout Routines**: Specific exercises targeting various muscle groups.
+- **Nutritional Supplements**: Guidance on supplements to enhance workout results.
+- **Inspirational Content**: Motivational resources and workout tips.
+- **Project Information**: Insights into the team and mission of Olympia.
 
-supplements.html -   a page providing info on workout supplements
+## Social Media and Legal
+- Follow us on [GitHub](#), [LinkedIn](#).
+- Privacy Policy and Terms & Conditions.
 
-exercises.html- a page that allows users to find exercises based on their target muscle group
+## Contribution
+This project is open for contributions. Please read our [contribution guidelines](#) before submitting a pull request.
 
-tips.html - a page that allows users to generate inpirational images at the click of a button
+## License
+© 2023 Olympia. All Rights Reserved.
 
-workouttips.html - allows the user to scroll through a list of helpful workout tips
-
-resources.html - a list of external links for other helpful resources
-
-about.html - a page showing information about the page and its devs (including me!)
+## Contact
+For more information, visit [Olympia](https://olympia.haothai2.repl.co/index.html).
